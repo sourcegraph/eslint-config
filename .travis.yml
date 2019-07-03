@@ -1,0 +1,27 @@
+language: node_js
+node_js: '12'
+cache: yarn
+env:
+  global:
+    - FORCE_COLOR=1
+install:
+  - yarn
+jobs:
+  include:
+    - stage: test
+      script:
+        - yarn run prettier-check
+        - yarn run tslint
+        - yarn run build
+    - stage: release
+      script:
+        - yarn run build
+        - yarn run semantic-release
+stages:
+  - test
+  - name: release
+    if: branch = master AND type = push AND fork = false
+branches:
+  only:
+    - master
+    - /^renovate\//

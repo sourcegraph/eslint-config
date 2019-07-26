@@ -16,12 +16,31 @@ npm install @sourcegraph/eslint-config
 yarn add @sourcegraph/eslint-config
 ```
 
-## Build
+Then add an `.eslintrc.json` to your project with
 
+```json
+{
+  "extends": "@sourcegraph/eslint-config"
+}
 ```
-yarn
-yarn build
-```
+
+## Principles
+
+Our lint rules are to help us write bug-free, readable and maintainable code.
+Rules are usually added because the patterns they are checking for have been proven to be problematic
+and frequently come up in code reviews.
+The intention is to save both authors and reviewers time by providing the author early feedback at the time of writing.
+Formatting concerns are intentionally left out and left to the code formatter of our choice, Prettier.
+
+Some rules are configured as warnings - these are patterns that usually should be avoided, however have some exceptions.
+Code authors are asked to double-check whether the violation is legitimate,
+and either prevent it or add a comment for reviewers that justify the violation.
+
+## TSLint
+
+This ruleset replaces almost all of our TSLint config, however there is a handful of rules that have no equivalent in ESLint yet.
+For these, it is recommended to run TSLint in addition to ESLint.
+The package dist-tag `@sourcegraph/tslint-config@eslint` contains only the TSLint rules that are not yet in this ESLint config.
 
 ## Release
 

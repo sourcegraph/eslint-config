@@ -8,16 +8,13 @@
     "url": "https://github.com/sourcegraph/eslint-config.git"
   },
   "files": [
-    "dist"
+    ".eslintrc.js"
   ],
   "main": ".eslintrc.js",
   "scripts": {
     "semantic-release": "semantic-release",
     "prettier": "prettier '**/*.{js?(on),ts?(x),scss,md,yml}' --write --list-different",
-    "prettier-check": "npm run prettier -- --write=false",
-    "tslint": "tslint -c tslint.json -p tsconfig.json './src/*.ts?(x)' './*.ts?(x)'",
-    "build": "tsc -p .",
-    "watch": "tsc -p . -w"
+    "prettier-check": "npm run prettier -- --write=false"
   },
   "commitlint": {
     "extends": [
@@ -36,5 +33,14 @@
     "husky": "^3.0.0",
     "prettier": "^1.18.2",
     "semantic-release": "^15.13.18"
+  },
+  "dependencies": {
+    "@sourcegraph/tslint-config": "^13.4.0",
+    "@typescript-eslint/eslint-plugin": "^1.13.0",
+    "@typescript-eslint/parser": "^1.13.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-ban": "^1.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsdoc": "^15.7.2"
   }
 }

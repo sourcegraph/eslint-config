@@ -66,6 +66,7 @@ module.exports = {
     'no-magic-numbers': 'off',
     'no-multiple-empty-lines': ['error', { max: 1 }],
     'no-new-wrappers': 'error',
+    'no-redeclare': 'off',
     'no-sparse-arrays': 'error',
     'no-sync': ['error', { allowAtRootLevel: true }],
     'no-template-curly-in-string': 'error',

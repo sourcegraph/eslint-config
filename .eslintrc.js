@@ -1,3 +1,4 @@
+const prettierrc = require('@sourcegraph/prettierrc')
 module.exports = {
   extends: [
     'eslint:recommended',
@@ -88,6 +89,7 @@ module.exports = {
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
     'prefer-template': 'off',
+    quotes: ['error', prettierrc.singleQuote ? 'single' : 'double'], // So autofixes use the right quote style
     radix: 'error',
     'require-await': 'error',
     'spaced-comment': 'error',

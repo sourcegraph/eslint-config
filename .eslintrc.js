@@ -116,6 +116,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'error',
     'react-hooks/rules-of-hooks': 'error',
     'react/button-has-type': 'error',
+    'react/display-name': 'off',
     'react/forbid-dom-props': ['error', { forbid: ['style'] }],
     'react/jsx-boolean-value': ['error', 'always'],
     'react/jsx-curly-brace-presence': 'error',

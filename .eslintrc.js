@@ -83,7 +83,7 @@ module.exports = {
     'no-void': 'error',
     'object-shorthand': 'error',
     'one-var': ['error', 'never'],
-    'prefer-arrow-callback': 'error',
+    'prefer-arrow-callback': ['error', { allowNamedFunctions: true }],
     'prefer-const': ['error', { destructuring: 'all' }],
     'prefer-object-spread': 'error',
     'prefer-promise-reject-errors': 'error',

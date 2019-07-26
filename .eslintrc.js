@@ -91,7 +91,7 @@ module.exports = {
     radix: 'error',
     'require-await': 'error',
     'spaced-comment': 'error',
-    'sort-imports': 'error',
+    'sort-imports': 'off', // Conflicts with TypeScript and is not fully autofixable.
     'use-isnan': 'error',
     'valid-typeof': 'off',
     yoda: 'error',

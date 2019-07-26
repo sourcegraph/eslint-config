@@ -87,7 +87,7 @@ module.exports = {
     'prefer-promise-reject-errors': 'error',
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
-    'prefer-template': 'error',
+    'prefer-template': 'off',
     radix: 'error',
     'require-await': 'error',
     'spaced-comment': 'error',

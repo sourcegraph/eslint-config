@@ -202,6 +202,7 @@ module.exports = {
         'jsdoc/valid-types': 'off',
         'import/no-unresolved': 'off',
         'import/default': 'off',
+        'import/named': 'off',
         'no-undef': 'off',
       },
     },

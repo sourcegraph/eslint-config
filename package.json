@@ -30,8 +30,8 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.0.0",
-    "@commitlint/config-conventional": "^8.0.0",
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
     "@sourcegraph/prettierrc": "^3.0.1",
     "husky": "^3.0.0",
     "prettier": "^1.18.2",

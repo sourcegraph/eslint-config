@@ -206,5 +206,11 @@ module.exports = {
         'no-undef': 'off',
       },
     },
+    {
+      files: '*.d.ts',
+      rules: {
+        'no-var': 'off',
+      },
+    },
   ],
 }

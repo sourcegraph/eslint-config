@@ -36,6 +36,8 @@ Some rules are configured as warnings - these are patterns that usually should b
 Code authors are asked to double-check whether the violation is legitimate,
 and either prevent it or add a comment for reviewers that justify the violation.
 
+**Think a rule is more annoying than useful?** Please open an issue!
+
 ## TSLint
 
 This ruleset replaces almost all of our TSLint config, however there is a handful of rules that have no equivalent in ESLint yet.

@@ -51,6 +51,7 @@ module.exports = {
     'no-caller': 'error',
     'no-cond-assign': 'error',
     'no-console': 'off',
+    'no-constant-condition': ['error', { checkLoops: false }],
     'no-debugger': 'error',
     'no-duplicate-imports': 'error',
     'no-empty': 'error',
@@ -140,12 +141,15 @@ module.exports = {
     'react/no-this-in-sfc': 'error',
     'react/no-typos': 'error',
     'react/no-unescaped-entities': ['error', { forbid: ['>', '}'] }],
-    'react/no-unsafe': 'error',
+    'react/no-unsafe': ['error', { checkAliases: true }],
     'react/no-unused-state': 'error',
-    'react/prefer-stateless-function': 'error',
+    'react/prefer-stateless-function': ['error', { ignorePureComponents: true }],
     'react/require-render-return': 'error',
     'react/void-dom-elements-no-children': 'error',
     'react/prop-types': 'off', // Not needed with TypeScript
+
+    // Only in TS
+    '@typescript-eslint/no-var-requires': 'off',
   },
   overrides: [
     {
@@ -204,12 +208,21 @@ module.exports = {
         'import/default': 'off',
         'import/named': 'off',
         'no-undef': 'off',
+        'no-dupe-class-members': 'off',
       },
     },
     {
       files: '*.d.ts',
       rules: {
         'no-var': 'off',
+        '@typescript-eslint/explicit-member-accessibility': 'off',
+        '@typescript-eslint/no-use-before-define': 'off',
+      },
+    },
+    {
+      files: '*.test.ts?(x)',
+      rules: {
+        'react/jsx-no-bind': 'off',
       },
     },
   ],

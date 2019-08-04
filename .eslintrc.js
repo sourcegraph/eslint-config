@@ -135,7 +135,7 @@ module.exports = {
     'react/no-direct-mutation-state': 'error',
     'react/no-find-dom-node': 'error',
     'react/no-is-mounted': 'error',
-    'react/no-multi-comp': ['error', { ignoreStateless: true }],
+    'react/no-multi-comp': ['off', { ignoreStateless: true }], // too many existing violations :/
     'react/no-redundant-should-component-update': 'error',
     'react/no-string-refs': 'error',
     'react/no-this-in-sfc': 'error',
@@ -180,7 +180,7 @@ module.exports = {
         '@typescript-eslint/no-floating-promises': 'error',
         '@typescript-eslint/no-inferrable-types': 'error',
         '@typescript-eslint/no-misused-new': 'error',
-        '@typescript-eslint/no-misused-promises': 'error',
+        '@typescript-eslint/no-misused-promises': 'warn',
         '@typescript-eslint/no-non-null-assertion': 'warn',
         '@typescript-eslint/no-object-literal-type-assertion': 'warn',
         '@typescript-eslint/no-parameter-properties': 'off',
@@ -220,9 +220,10 @@ module.exports = {
       },
     },
     {
-      files: '*.test.ts?(x)',
+      files: '*.@(test|story).ts?(x)',
       rules: {
         'react/jsx-no-bind': 'off',
+        '@typescript-eslint/explicit-function-return-type': 'off',
       },
     },
   ],

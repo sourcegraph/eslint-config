@@ -32,11 +32,27 @@ and frequently come up in code reviews.
 The intention is to save both authors and reviewers time by providing the author early feedback at the time of writing.
 Formatting concerns are intentionally left out and left to the code formatter of our choice, Prettier.
 
-Some rules are configured as warnings - these are patterns that usually should be avoided, however have some exceptions.
+### Warnings
+
+Some rules are configured as warnings. There can be two reasons for this:
+
+- They are patterns that have too many existing violation in our code to roll them out as errors.
+  Once those are removed, the severity will be changed to error.
+- They are patterns that usually should be avoided, however have some exceptions.
+
 Code authors are asked to double-check whether the violation is legitimate,
 and either prevent it or add a comment for reviewers that justify the violation.
 
-**Think a rule is more annoying than useful?** Please open an issue!
+### When to use `eslint-disable`
+
+Rules are not perfect and may sometimes flag false positives.
+For these cases, and only these cases, there is `eslint-disable`.
+Prefer keeping the disabled zone as small as possible (preferrably using `eslint-disable-next-line`).
+When disabling a rule, it is a good practice to add an additional comment stating a justification why the rule is okay to be disabled there.
+This saves a roundtrip in code review, as the reviewer would have to ask for the reason.
+It also serves as information to future readers that this is an exceptional condition and should not be blindly copied somewhere else without verifying the same condition applies there.
+
+When not to use `eslint-disable`: If you disagree with a rule (think a rule is more annoying than useful), please open an issue here to discuss changing the rule for all code, if there is consensus.
 
 ## TSLint
 

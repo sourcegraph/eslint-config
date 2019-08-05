@@ -101,9 +101,10 @@ module.exports = {
     yoda: 'error',
 
     // Imports
+    'import/extensions': ['error', 'never'],
     'import/no-deprecated': 'warn',
     'import/no-unused-modules': 'error',
-    'import/no-cycle': 'warn',
+    'import/no-cycle': 'off', // Too slow
     'import/no-self-import': 'error',
     'import/no-dynamic-require': 'error',
     'import/no-useless-path-segments': 'error',
@@ -188,7 +189,7 @@ module.exports = {
         '@typescript-eslint/no-triple-slash-reference': 'error',
         '@typescript-eslint/no-unnecessary-qualifier': 'error',
         '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
-        '@typescript-eslint/no-unused-vars': 'warn',
+        '@typescript-eslint/no-unused-vars': ['warn', { ignoreRestSiblings: true }],
         '@typescript-eslint/no-use-before-define': ['error', { functions: false }],
         '@typescript-eslint/no-var-requires': 'error',
         '@typescript-eslint/prefer-for-of': 'error',
@@ -201,12 +202,16 @@ module.exports = {
         '@typescript-eslint/unified-signatures': 'error',
 
         'jsdoc/no-types': 'error',
+        'jsdoc/no-undefined-types': 'off',
         'jsdoc/require-param-type': 'off',
         'jsdoc/require-returns-type': 'off',
         'jsdoc/valid-types': 'off',
         'import/no-unresolved': 'off',
         'import/default': 'off',
         'import/named': 'off',
+        'import/namespace': 'off',
+        'import/no-deprecated': 'off',
+        'react/no-direct-mutation-state': 'off',
         'no-undef': 'off',
         'no-dupe-class-members': 'off',
       },

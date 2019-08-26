@@ -61,6 +61,7 @@ module.exports = {
     'no-extra-semi': 'off',
     'no-fallthrough': 'off',
     'no-floating-decimal': 'error',
+    'no-inner-declarations': 'off',
     'no-invalid-this': 'off',
     'no-irregular-whitespace': 'error',
     'no-lonely-if': 'error',

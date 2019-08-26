@@ -161,7 +161,26 @@ module.exports = {
         '@typescript-eslint/adjacent-overload-signatures': 'error',
         '@typescript-eslint/array-type': 'error',
         '@typescript-eslint/await-thenable': 'error',
-        '@typescript-eslint/ban-types': 'error',
+        '@typescript-eslint/ban-types': [
+          'error',
+          {
+            types: {
+              Function: 'Use a concrete function type like () => T instead',
+              String: {
+                message: 'Use string (lowercase) instead',
+                fixWith: 'string',
+              },
+              Boolean: {
+                message: 'Use boolean (lowercase) instead',
+                fixWith: 'boolean',
+              },
+              Number: {
+                message: 'Use number (lowercase) instead',
+                fixWith: 'number',
+              },
+            },
+          },
+        ],
         '@typescript-eslint/camelcase': 'off',
         '@typescript-eslint/class-name-casing': 'error',
         '@typescript-eslint/explicit-function-return-type': [

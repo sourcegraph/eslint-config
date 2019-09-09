@@ -11,7 +11,7 @@ module.exports = {
     'plugin:import/warnings',
     'plugin:import/typescript',
   ],
-  plugins: ['ban', 'jsdoc', 'react', 'react-hooks'],
+  plugins: ['ban', 'jsdoc', 'react', 'react-hooks', 'etc'],
   settings: {
     react: {
       version: 'detect',
@@ -149,6 +149,10 @@ module.exports = {
     'react/require-render-return': 'error',
     'react/void-dom-elements-no-children': 'error',
     'react/prop-types': 'off', // Not needed with TypeScript
+
+    // https://github.com/cartant/eslint-plugin-etc/issues/1
+    // 'etc/throw-error': 'error',
+    'etc/deprecation': 'warn',
 
     // Only in TS
     '@typescript-eslint/no-var-requires': 'off',

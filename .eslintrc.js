@@ -34,6 +34,10 @@ module.exports = {
         name: ['it', 'only'],
         message: "Don't forget to remove .only before committing",
       },
+      {
+        name: ['jest', 'fn'],
+        message: 'Use sinon.spy(() => {}) instead',
+      }
     ],
     'callback-return': 'error',
     complexity: 'off',

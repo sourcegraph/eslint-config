@@ -37,7 +37,7 @@ module.exports = {
       {
         name: ['jest', 'fn'],
         message: 'Use sinon.spy(() => {}) instead',
-      }
+      },
     ],
     'callback-return': 'error',
     complexity: 'off',

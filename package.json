@@ -31,7 +31,7 @@
     "@commitlint/config-conventional": "^8.2.0",
     "husky": "^3.0.2",
     "prettier": "^1.18.2",
-    "semantic-release": "^15.13.19"
+    "semantic-release": "^15.13.30"
   },
   "dependencies": {
     "@sourcegraph/prettierrc": "^3.0.1",

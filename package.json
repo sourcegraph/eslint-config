@@ -35,8 +35,8 @@
   },
   "dependencies": {
     "@sourcegraph/prettierrc": "^3.0.1",
-    "@typescript-eslint/eslint-plugin": "^2.4.0",
-    "@typescript-eslint/parser": "^2.4.0",
+    "@typescript-eslint/eslint-plugin": "^2.6.1",
+    "@typescript-eslint/parser": "^2.6.1",
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-ban": "^1.2.0",
     "eslint-plugin-etc": "^0.0.1-beta.6",

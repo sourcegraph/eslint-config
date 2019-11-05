@@ -18,6 +18,9 @@ module.exports = {
     react: {
       version: 'detect',
     },
+    jsdoc: {
+      mode: 'typescript',
+    },
   },
   rules: {
     'arrow-body-style': 'error',

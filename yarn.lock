@@ -1462,10 +1462,10 @@ eslint-config-prettier@^6.5.0:
   dependencies:
     get-stdin "^6.0.0"
 
-eslint-etc@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.npmjs.org/eslint-etc/-/eslint-etc-0.0.1.tgz#e082e6ed4de09e901378a950c7d48efe3a4c4b60"
-  integrity sha512-XqVDWFXffrRW/RKB2dojpz+xcoox+WikWjkwUNW2cKdqhE/puJGu1Gd7wo4qWLozvirS7WXCoTY5xhVsQkhgUw==
+eslint-etc@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/eslint-etc/-/eslint-etc-0.0.3.tgz#174203a561eca6ec83a15d34a7735636a6a8689a"
+  integrity sha512-2z8FOcOd/SCQmJvWKT44n4OK8+PTcu4uxIn6mEokZtFpVjIX9fMeS0cuV44D9ccZEli3UfQyq1hkpRgR4IHmow==
 
 eslint-import-resolver-node@^0.3.2:
   version "0.3.2"
@@ -1490,12 +1490,13 @@ eslint-plugin-ban@^1.3.0:
   dependencies:
     requireindex "~1.2.0"
 
-eslint-plugin-etc@^0.0.1-beta.6:
-  version "0.0.1-beta.6"
-  resolved "https://registry.npmjs.org/eslint-plugin-etc/-/eslint-plugin-etc-0.0.1-beta.6.tgz#7edee4ee78073078312e4a7798907be94708c9dc"
-  integrity sha512-0htnrSFUDNKL3WIaIbS/HQQmO3KnvTuU3AGjc8YiX/xvTWMk6mPtp/UrmsMvUSI3LZhWfgJCcXF8qA1hgZOA4Q==
+eslint-plugin-etc@^0.0.1-beta.18:
+  version "0.0.1-beta.18"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-etc/-/eslint-plugin-etc-0.0.1-beta.18.tgz#2c39b4da47971076bf04f2c6a8d3295f232601b2"
+  integrity sha512-U6QQS4CxJzvpqgTUZivH0O/NzrC5EV/9E50DSwSzQDK56l67CGh8rnmwW19jrboJrAQ8nzwPV7YSrQQMl4G81w==
   dependencies:
-    eslint-etc "^0.0.1"
+    "@phenomnomnominal/tsquery" "^3.0.0"
+    eslint-etc "^0.0.3"
     requireindex "~1.2.0"
     tslib "^1.8.0"
     tslint-etc "^1.6.0"

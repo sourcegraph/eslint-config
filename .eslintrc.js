@@ -225,7 +225,14 @@ module.exports = {
         '@typescript-eslint/no-require-imports': 'error',
         '@typescript-eslint/no-unnecessary-qualifier': 'error',
         '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
-        '@typescript-eslint/no-unused-vars': ['warn', { ignoreRestSiblings: true }],
+        '@typescript-eslint/no-unused-vars': [
+          'warn',
+          {
+            varsIgnorePattern: '.*', // TS already enforces this
+            args: 'after-used',
+            ignoreRestSiblings: true,
+          },
+        ],
         '@typescript-eslint/no-use-before-define': ['error', { functions: false }],
         '@typescript-eslint/no-useless-constructor': 'error',
         '@typescript-eslint/no-var-requires': 'error',
@@ -249,6 +256,7 @@ module.exports = {
         'import/namespace': 'off',
         'import/no-deprecated': 'off',
         'react/no-direct-mutation-state': 'off',
+        'react/jsx-no-undef': 'off',
         'no-undef': 'off',
         'no-dupe-class-members': 'off',
         'require-await': 'off',

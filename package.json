@@ -43,6 +43,6 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsdoc": "^17.1.0",
     "eslint-plugin-react": "^7.16.0",
-    "eslint-plugin-react-hooks": "^2.2.0"
+    "eslint-plugin-react-hooks": "^2.3.0"
   }
 }

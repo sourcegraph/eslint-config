@@ -42,7 +42,7 @@
     "eslint-plugin-etc": "^0.0.1-beta.22",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsdoc": "^17.1.0",
-    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react": "^7.17.0",
     "eslint-plugin-react-hooks": "^2.3.0"
   }
 }

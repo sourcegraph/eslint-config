@@ -279,7 +279,6 @@ module.exports = {
         'react/jsx-no-bind': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',
         'react/button-has-type': 'off',
-        '@typescript-eslint/no-explicit-any': 'off',
       },
     },
   ],

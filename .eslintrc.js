@@ -26,7 +26,7 @@ module.exports = {
     'arrow-body-style': 'error',
     'arrow-parens': ['error', 'as-needed'],
     'ban/ban': [
-      'warn',
+      'error',
       {
         name: ['*', 'forEach'],
         message: 'Use a for-of loop instead',
@@ -41,7 +41,7 @@ module.exports = {
       },
       {
         name: ['jest', 'fn'],
-        message: 'Use sinon.spy(() => {}) instead',
+        message: 'Use sinon.spy(() => undefined) instead',
       },
     ],
     'callback-return': 'error',

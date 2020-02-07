@@ -34,10 +34,10 @@
     "semantic-release": "^17.0.2"
   },
   "dependencies": {
-    "@sourcegraph/prettierrc": "^3.0.1",
+    "@sourcegraph/prettierrc": "^3.0.2",
     "@typescript-eslint/eslint-plugin": "^2.19.0",
     "@typescript-eslint/parser": "^2.19.0",
-    "eslint-config-prettier": "^6.9.0",
+    "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-ban": "^1.4.0",
     "eslint-plugin-etc": "^0.0.1-beta.24",
     "eslint-plugin-import": "^2.19.1",

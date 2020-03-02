@@ -221,6 +221,7 @@ module.exports = {
           { assertionStyle: 'as', objectLiteralTypeAssertions: 'never' },
         ],
         '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
+        '@typescript-eslint/no-base-to-string': 'error',
         '@typescript-eslint/no-parameter-properties': 'off',
         '@typescript-eslint/no-require-imports': 'error',
         '@typescript-eslint/no-unnecessary-qualifier': 'error',
@@ -244,6 +245,7 @@ module.exports = {
         '@typescript-eslint/prefer-nullish-coalescing': 'off', // https://github.com/typescript-eslint/typescript-eslint/issues/1265
         '@typescript-eslint/type-annotation-spacing': 'off',
         '@typescript-eslint/triple-slash-reference': 'error',
+        '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true }],
         '@typescript-eslint/return-await': 'error',
         '@typescript-eslint/unbound-method': 'error',
         '@typescript-eslint/unified-signatures': 'error',

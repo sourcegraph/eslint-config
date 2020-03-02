@@ -128,9 +128,8 @@ module.exports = {
     'jsdoc/check-tag-names': [
       'error',
       {
-        definedTags: [
-          'internal', // Used by typedoc
-        ],
+        // Used by typedoc
+        definedTags: ['hidden', 'internal'],
       },
     ],
 

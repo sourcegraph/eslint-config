@@ -125,6 +125,14 @@ module.exports = {
     'jsdoc/require-jsdoc': 'off',
     'jsdoc/require-param': 'off',
     'jsdoc/no-bad-blocks': 'error',
+    'jsdoc/check-tag-names': [
+      'error',
+      {
+        definedTags: [
+          'internal', // Used by typedoc
+        ],
+      },
+    ],
 
     // Rules for React
     'react-hooks/exhaustive-deps': 'error',

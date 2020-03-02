@@ -124,6 +124,7 @@ module.exports = {
     'jsdoc/require-returns': 'off',
     'jsdoc/require-jsdoc': 'off',
     'jsdoc/require-param': 'off',
+    'jsdoc/no-bad-blocks': 'error',
 
     // Rules for React
     'react-hooks/exhaustive-deps': 'error',

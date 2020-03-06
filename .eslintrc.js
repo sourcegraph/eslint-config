@@ -164,6 +164,7 @@ module.exports = {
     'react/no-unused-state': 'error',
     'react/prefer-stateless-function': ['error', { ignorePureComponents: true }],
     'react/require-render-return': 'error',
+    'react/self-closing-comp': 'error',
     'react/void-dom-elements-no-children': 'error',
     'react/prop-types': 'off', // Not needed with TypeScript
 

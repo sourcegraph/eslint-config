@@ -292,5 +292,12 @@ module.exports = {
         'react/button-has-type': 'off',
       },
     },
+    {
+      files: '*.test.tsx',
+      rules: {
+        // False positive on react-test-renderer act()
+        '@typescript-eslint/no-floating-promises': 'off',
+      },
+    },
   ],
 }

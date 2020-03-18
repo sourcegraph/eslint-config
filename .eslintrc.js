@@ -13,6 +13,9 @@ module.exports = {
     'plugin:import/warnings',
     'plugin:import/typescript',
   ],
+  globals: {
+    globalThis: false, // false means not writable
+  },
   plugins: ['ban', 'jsdoc', 'react', 'react-hooks', 'etc'],
   settings: {
     react: {

@@ -183,8 +183,7 @@ module.exports = {
     'rxjs/no-unsafe-catch': 'error',
     'rxjs/no-subject-unsubscribe': 'error',
 
-    // https://github.com/cartant/eslint-plugin-etc/issues/1
-    // 'etc/throw-error': 'error',
+    'etc/throw-error': 'error',
     'etc/deprecation': 'warn',
 
     '@typescript-eslint/no-var-requires': 'off',

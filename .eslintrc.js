@@ -16,7 +16,7 @@ module.exports = {
   globals: {
     globalThis: false, // false means not writable
   },
-  plugins: ['ban', 'jsdoc', 'react', 'react-hooks', 'etc'],
+  plugins: ['ban', 'jsdoc', 'react', 'react-hooks', 'etc', 'rxjs'],
   settings: {
     react: {
       version: 'detect',
@@ -170,6 +170,18 @@ module.exports = {
     'react/self-closing-comp': 'error',
     'react/void-dom-elements-no-children': 'error',
     'react/prop-types': 'off', // Not needed with TypeScript
+
+    // Rules for RxJS
+    'rxjs/no-ignored-observable': 'error',
+    'rxjs/no-ignored-subscription': 'error',
+    'rxjs/no-async-subscribe': 'error',
+    'rxjs/no-nested-subscribe': 'error',
+    'rxjs/no-unbound-methods': 'error',
+    'rxjs/throw-error': 'error',
+    'rxjs/no-internal': 'error',
+    'rxjs/no-subclass': 'error',
+    'rxjs/no-unsafe-catch': 'error',
+    'rxjs/no-subject-unsubscribe': 'error',
 
     // https://github.com/cartant/eslint-plugin-etc/issues/1
     // 'etc/throw-error': 'error',

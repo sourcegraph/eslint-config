@@ -9,11 +9,29 @@ install:
 jobs:
   include:
     - stage: test
+      env: LABEL=prettier
       script:
         - yarn run prettier-check
+    - &check_dependent
+      stage: test
+      env: LABEL=check_dependent
+      addons:
+        apt:
+          packages:
+            - parallel
+      script:
+        - git clone --depth 1 https://github.com/sourcegraph/sourcegraph ../sourcegraph
+        - cd ../sourcegraph
+        - yarn
+        - yarn add --dev ../eslint-config
+        - yarn deduplicate
+        - yarn
+        - yarn all:eslint
     - stage: release
       script:
         - yarn run semantic-release
+  allow_failures:
+    - *check_dependent
 stages:
   - test
   - name: release

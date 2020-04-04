@@ -1,0 +1,22 @@
+env:
+  FORCE_COLOR: '3'
+
+steps:
+  - command: |-
+      yarn
+      yarn prettier-check
+    label: ':prettier:'
+
+  - command: ./check_dependent.sh
+    label: ':eslint:'
+    branches: '!master'
+
+  - wait
+
+  - command: |-
+      yarn
+      yarn run semantic-release
+    branches: master
+    label: ':npm:'
+    concurrency: 1
+    concurrency_group: release

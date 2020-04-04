@@ -19,13 +19,15 @@ jobs:
         apt:
           packages:
             - parallel
-      script:
+      install:
+        - yarn
         - git clone --depth 1 https://github.com/sourcegraph/sourcegraph ../sourcegraph
         - cd ../sourcegraph
         - yarn
         - yarn add --dev ../eslint-config
         - yarn deduplicate
         - yarn
+      script:
         - yarn all:eslint
     - stage: release
       script:

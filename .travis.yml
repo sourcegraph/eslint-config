@@ -1,5 +1,6 @@
 language: node_js
 node_js: '12'
+sudo: required # Require a VM (better perf)
 cache: yarn
 env:
   global:

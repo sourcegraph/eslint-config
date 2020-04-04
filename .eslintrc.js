@@ -25,6 +25,7 @@ module.exports = {
       mode: 'typescript',
     },
   },
+  reportUnusedDisableDirectives: true,
   rules: {
     'arrow-body-style': 'error',
     'arrow-parens': ['error', 'as-needed'],

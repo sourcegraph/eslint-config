@@ -48,6 +48,18 @@ module.exports = {
         message: 'Use sinon.spy(() => undefined) instead',
       },
     ],
+    'no-restricted-imports': [
+      'error',
+      {
+        paths: [
+          {
+            name: 'lodash',
+            importNames: ['isArray'],
+            message: 'Use Array.isArray instead.',
+          },
+        ],
+      },
+    ],
     'callback-return': 'error',
     complexity: 'off',
     'constructor-super': 'error',

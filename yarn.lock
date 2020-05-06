@@ -1592,10 +1592,10 @@ eslint-module-utils@^2.4.1:
     debug "^2.6.9"
     pkg-dir "^2.0.0"
 
-eslint-plugin-ban@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.npmjs.org/eslint-plugin-ban/-/eslint-plugin-ban-1.4.0.tgz#b3a7b000412921336b1feeece5b8ce9a69dea605"
-  integrity sha512-wtrUOLg8WUiGDkVnmyMseLRtXYBM+bJTe2STvhqznHVj6RPAiNEVLbvDj2b0WWwY/2ldKqeaw3iHUHwfCJ8c8Q==
+eslint-plugin-ban@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-ban/-/eslint-plugin-ban-1.5.1.tgz#ee7345e9986ae71dd3865722559c155663422777"
+  integrity sha512-I15ptCK+Oy/6N0/Trd9+fXRW0DHivX2K3lQf6+XNK0mRRv5G/4PFuVs7YQa5VxIxui8HVgXnwoa1HGHJDQF/WQ==
   dependencies:
     requireindex "~1.2.0"
 

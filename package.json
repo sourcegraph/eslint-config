@@ -44,6 +44,7 @@
     "eslint-plugin-jsdoc": "^22.2.0",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^4.0.0",
-    "eslint-plugin-rxjs": "^0.0.2-beta.20"
+    "eslint-plugin-rxjs": "^0.0.2-beta.20",
+    "eslint-plugin-unicorn": "^20.1.0"
   }
 }

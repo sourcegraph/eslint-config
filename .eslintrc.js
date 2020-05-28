@@ -12,6 +12,7 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
+    'plugin:unicorn/recommended',
   ],
   globals: {
     globalThis: false, // false means not writable
@@ -202,6 +203,17 @@ module.exports = {
 
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/prefer-regexp-exec': 'off',
+
+    'unicorn/filename-case': ['error', { cases: { camelCase: true, pascalCase: true, kebabCase: true } }],
+    'unicorn/no-process-exit': 'off',
+    'unicorn/no-null': 'off', // DOM API often works with null
+    'unicorn/no-fn-reference-in-iterator': 'off', // we use filter(isDefined) a lot
+    'unicorn/no-reduce': 'off',
+    'unicorn/no-useless-undefined': 'off', // conflicts with TypeScript
+    'unicorn/prefer-number-properties': 'off',
+    'unicorn/custom-error-definition': 'off', // false positives: https://github.com/sindresorhus/eslint-plugin-unicorn/issues/753
+    'unicorn/prevent-abbreviations': 'off',
+    'unicorn/no-nested-ternary': 'off', // if-elseif-else ternaries are commonly needed in JSX and formatted well by Prettier
   },
   overrides: [
     {
@@ -244,6 +256,7 @@ module.exports = {
         '@typescript-eslint/member-delimiter-style': 'off',
         '@typescript-eslint/member-ordering': 'off',
         '@typescript-eslint/no-empty-interface': 'off',
+        '@typescript-eslint/no-empty-function': ['error', { allow: ['arrowFunctions'] }],
         '@typescript-eslint/no-explicit-any': 'warn',
         '@typescript-eslint/no-extraneous-class': 'error',
         '@typescript-eslint/no-for-in-array': 'error',
@@ -280,8 +293,12 @@ module.exports = {
         '@typescript-eslint/no-var-requires': 'error',
         '@typescript-eslint/prefer-as-const': 'error',
         '@typescript-eslint/prefer-for-of': 'error',
+        'unicorn/no-for-loop': 'off',
+        '@typescript-eslint/prefer-string-starts-ends-with': 'error',
+        'unicorn/prefer-starts-ends-with': 'off',
         '@typescript-eslint/prefer-function-type': 'error',
         '@typescript-eslint/prefer-includes': 'error',
+        'unicorn/prefer-includes': 'off',
         '@typescript-eslint/prefer-namespace-keyword': 'error',
         '@typescript-eslint/prefer-optional-chain': 'error',
         '@typescript-eslint/prefer-nullish-coalescing': 'off', // https://github.com/typescript-eslint/typescript-eslint/issues/1265
@@ -324,6 +341,7 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type': 'off',
         'react/button-has-type': 'off',
         'rxjs/no-ignored-subscription': 'warn',
+        'unicorn/consistent-function-scoping': 'off',
       },
     },
     {
@@ -331,6 +349,8 @@ module.exports = {
       rules: {
         // False positive on react-test-renderer act()
         '@typescript-eslint/no-floating-promises': 'off',
+        // False positive https://github.com/sindresorhus/eslint-plugin-unicorn/issues/751
+        'unicorn/prefer-flat-map': 'off',
       },
     },
   ],

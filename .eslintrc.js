@@ -212,8 +212,69 @@ module.exports = {
     'unicorn/no-useless-undefined': 'off', // conflicts with TypeScript
     'unicorn/prefer-number-properties': 'off',
     'unicorn/custom-error-definition': 'off', // false positives: https://github.com/sindresorhus/eslint-plugin-unicorn/issues/753
-    'unicorn/prevent-abbreviations': 'off',
     'unicorn/no-nested-ternary': 'off', // if-elseif-else ternaries are commonly needed in JSX and formatted well by Prettier
+    'id-length': [
+      'error',
+      {
+        min: 3,
+        properties: 'never',
+        exceptions: [
+          // valid
+          'to',
+          'as',
+          'id',
+          // NodeJS standard library
+          'fs',
+          // conventionally used for import * as H from 'history' to not conflict with the global history
+          'H',
+          // allow `distinctUntilChanged((a, b) => isEqual(a, b))`,
+          // which is extremely common and necessary to maintain type safety.
+          'a',
+          'b',
+          // caught by prevent-abbreviations below, avoid double-flagging
+          'e',
+          'i',
+          'ch',
+        ],
+      },
+    ],
+    'unicorn/prevent-abbreviations': [
+      'error',
+      {
+        checkShorthandImports: false,
+        replacements: {
+          e: {
+            event: true,
+            error: true,
+            editor: true,
+            end: true, // as in e2e
+          },
+          i: { index: true },
+          idx: { index: true },
+          ch: { character: true },
+          j2d: { goToDefinition: true },
+          pos: { position: true },
+          ext: { extension: true },
+          expr: { expression: true },
+          sub: { subscription: true },
+          obs: { observable: true, observer: true },
+          // When saving a document in a variable, we usually don't mean the the global document,
+          // but an extension API text document. Avoid shadowing suffixes.
+          doc: { document: false, textDocument: true },
+          // Never needed in our codebase, better to have an autofix for directory
+          dir: { direction: false },
+          // The meaning of rev vs ref is a common source of confusion.
+          // Spelling it out makes it clear.
+          rev: { revision: true },
+          // Allow since it's a React term
+          props: false,
+        },
+        whitelist: {
+          args: true, // arguments is special
+          fs: true, // NodeJS standard library
+        },
+      },
+    ],
   },
   overrides: [
     {
@@ -332,6 +393,8 @@ module.exports = {
         'no-var': 'off',
         '@typescript-eslint/explicit-member-accessibility': 'off',
         '@typescript-eslint/no-use-before-define': 'off',
+        'unicorn/prevent-abbreviations': 'off',
+        'id-length': 'off',
       },
     },
     {

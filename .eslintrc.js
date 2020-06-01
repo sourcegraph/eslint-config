@@ -310,8 +310,7 @@ module.exports = {
             },
           },
         ],
-        '@typescript-eslint/camelcase': 'off',
-        '@typescript-eslint/class-name-casing': 'error',
+        '@typescript-eslint/naming-convention': 'error',
         '@typescript-eslint/explicit-function-return-type': [
           'error',
           { allowExpressions: true, allowTypedFunctionExpressions: true, allowHigherOrderFunctions: true },

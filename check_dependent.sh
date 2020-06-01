@@ -8,6 +8,8 @@ CONFIG_DIR=$(pwd)
 CLONE_DIR=$(mktemp -d)
 git clone --depth 1 https://github.com/sourcegraph/sourcegraph "$CLONE_DIR"
 cd "$CLONE_DIR"
+echo "--- install nodejs"
+asdf install
 echo "--- yarn"
 yarn --frozen-lockfile
 echo "--- yarn add"

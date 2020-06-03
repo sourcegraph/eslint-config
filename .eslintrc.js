@@ -246,7 +246,6 @@ module.exports = {
           e: {
             event: true,
             error: true,
-            editor: true,
             end: true, // as in e2e
           },
           i: { index: true },
@@ -254,9 +253,14 @@ module.exports = {
           ch: { character: true },
           j2d: { goToDefinition: true },
           pos: { position: true },
+          cmd: { command: true },
+          cmds: { commands: true },
+          loc: { location: true },
           ext: { extension: true },
           expr: { expression: true },
           sub: { subscription: true },
+          subs: { subscriptions: true },
+          rect: { rectangle: true },
           obs: { observable: true, observer: true },
           // When saving a document in a variable, we usually don't mean the the global document,
           // but an extension API text document. Avoid shadowing suffixes.

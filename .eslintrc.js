@@ -253,6 +253,7 @@ module.exports = {
           ch: { character: true },
           j2d: { goToDefinition: true },
           pos: { position: true },
+          opt: { options: true, option: true },
           cmd: { command: true },
           cmds: { commands: true },
           loc: { location: true },

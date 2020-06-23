@@ -203,6 +203,11 @@ module.exports = {
 
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/prefer-regexp-exec': 'off',
+    // These are error by default for JS too
+    '@typescript-eslint/no-unsafe-call': 'warn',
+    '@typescript-eslint/no-unsafe-member-access': 'warn',
+    '@typescript-eslint/no-unsafe-return': 'warn',
+    '@typescript-eslint/no-unsafe-assignment': 'warn',
 
     'unicorn/filename-case': ['error', { cases: { camelCase: true, pascalCase: true, kebabCase: true } }],
     'unicorn/no-process-exit': 'off',
@@ -305,24 +310,20 @@ module.exports = {
           },
         ],
         '@typescript-eslint/naming-convention': [
-          'error',
+          'off',
           {
+            // Properties and destructured variables often can't be controlled by us if the API is external.
+            // Event logging, `__typename` etc don't follow conventions enforceable here.
+            // We also need to allow implementing external interface methods, e.g. UNSAFE_componentWillReceiveProps().
             selector: 'default',
-            format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
-            leadingUnderscore: 'allow',
-            trailingUnderscore: 'allow',
+            format: null,
           },
           {
+            // Helps e.g. Go engineers who are used to lowercase unexported types.
             selector: 'typeLike',
             format: ['PascalCase'],
             leadingUnderscore: 'allow',
             trailingUnderscore: 'allow',
-          },
-          {
-            // Properties often can't be controlled by us if the API is external.
-            // Event logging, `__typename` etc don't follow conventions enforceable here.
-            selector: 'property',
-            format: null,
           },
         ],
         '@typescript-eslint/explicit-function-return-type': [

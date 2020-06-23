@@ -203,6 +203,11 @@ module.exports = {
 
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/prefer-regexp-exec': 'off',
+    // These are error by default for JS too
+    '@typescript-eslint/no-unsafe-call': 'warn',
+    '@typescript-eslint/no-unsafe-member-access': 'warn',
+    '@typescript-eslint/no-unsafe-return': 'warn',
+    '@typescript-eslint/no-unsafe-assignment': 'warn',
 
     'unicorn/filename-case': ['error', { cases: { camelCase: true, pascalCase: true, kebabCase: true } }],
     'unicorn/no-process-exit': 'off',
@@ -293,25 +298,34 @@ module.exports = {
         '@typescript-eslint/ban-types': [
           'error',
           {
+            extendDefaults: true,
             types: {
-              Function: 'Use a concrete function type like () => T instead',
-              String: {
-                message: 'Use string (lowercase) instead',
-                fixWith: 'string',
-              },
-              Boolean: {
-                message: 'Use boolean (lowercase) instead',
-                fixWith: 'boolean',
-              },
-              Number: {
-                message: 'Use number (lowercase) instead',
-                fixWith: 'number',
-              },
+              // We have custom helpers to deal with checking properties of the `object` type.
+              object: false,
+              // The empty interface {} is often used for React components that accept no props,
+              // which is a lot easier to understand than accepting `object` or `Record<never, never>`
+              // and has no real diadvantages.
+              '{}': false,
             },
           },
         ],
-        '@typescript-eslint/camelcase': 'off',
-        '@typescript-eslint/class-name-casing': 'error',
+        '@typescript-eslint/naming-convention': [
+          'off',
+          {
+            // Properties and destructured variables often can't be controlled by us if the API is external.
+            // Event logging, `__typename` etc don't follow conventions enforceable here.
+            // We also need to allow implementing external interface methods, e.g. UNSAFE_componentWillReceiveProps().
+            selector: 'default',
+            format: null,
+          },
+          {
+            // Helps e.g. Go engineers who are used to lowercase unexported types.
+            selector: 'typeLike',
+            format: ['PascalCase'],
+            leadingUnderscore: 'allow',
+            trailingUnderscore: 'allow',
+          },
+        ],
         '@typescript-eslint/explicit-function-return-type': [
           'error',
           { allowExpressions: true, allowTypedFunctionExpressions: true, allowHigherOrderFunctions: true },
@@ -346,6 +360,7 @@ module.exports = {
         '@typescript-eslint/no-unsafe-call': 'warn',
         '@typescript-eslint/no-unsafe-member-access': 'warn',
         '@typescript-eslint/no-unsafe-return': 'warn',
+        '@typescript-eslint/no-unsafe-assignment': 'warn',
         '@typescript-eslint/no-unused-vars': [
           'warn',
           {

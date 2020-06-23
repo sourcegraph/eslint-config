@@ -314,7 +314,7 @@ module.exports = {
           'error',
           {
             selector: 'default',
-            format: ['camelCase', 'UPPER_CASE'],
+            format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
             leadingUnderscore: 'allow',
             trailingUnderscore: 'allow',
           },
@@ -323,6 +323,16 @@ module.exports = {
             format: ['PascalCase'],
             leadingUnderscore: 'allow',
             trailingUnderscore: 'allow',
+          },
+          {
+            selector: 'enumMember',
+            format: ['PascalCase'],
+          },
+          {
+            // Properties often can't be controlled by us if the API is external.
+            // Event logging, `__typename` etc don't follow conventions enforceable here.
+            selector: 'property',
+            format: null,
           },
         ],
         '@typescript-eslint/explicit-function-return-type': [

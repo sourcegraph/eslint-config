@@ -293,20 +293,14 @@ module.exports = {
         '@typescript-eslint/ban-types': [
           'error',
           {
+            extendDefaults: true,
             types: {
-              Function: 'Use a concrete function type like () => T instead',
-              String: {
-                message: 'Use string (lowercase) instead',
-                fixWith: 'string',
-              },
-              Boolean: {
-                message: 'Use boolean (lowercase) instead',
-                fixWith: 'boolean',
-              },
-              Number: {
-                message: 'Use number (lowercase) instead',
-                fixWith: 'number',
-              },
+              // We have custom helpers to deal with checking properties of the `object` type.
+              object: false,
+              // The empty interface {} is often used for React components that accept no props,
+              // which is a lot easier to understand than accepting `object` or `Record<never, never>`
+              // and has no real diadvantages.
+              '{}': false,
             },
           },
         ],
@@ -323,10 +317,6 @@ module.exports = {
             format: ['PascalCase'],
             leadingUnderscore: 'allow',
             trailingUnderscore: 'allow',
-          },
-          {
-            selector: 'enumMember',
-            format: ['PascalCase'],
           },
           {
             // Properties often can't be controlled by us if the API is external.
@@ -369,6 +359,7 @@ module.exports = {
         '@typescript-eslint/no-unsafe-call': 'warn',
         '@typescript-eslint/no-unsafe-member-access': 'warn',
         '@typescript-eslint/no-unsafe-return': 'warn',
+        '@typescript-eslint/no-unsafe-assignment': 'warn',
         '@typescript-eslint/no-unused-vars': [
           'warn',
           {

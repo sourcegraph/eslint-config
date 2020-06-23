@@ -315,14 +315,14 @@ module.exports = {
           {
             selector: 'default',
             format: ['camelCase', 'UPPER_CASE'],
-            leadingUnderscores: 'allow',
-            trailingUnderscores: 'allow',
+            leadingUnderscore: 'allow',
+            trailingUnderscore: 'allow',
           },
           {
             selector: 'typeLike',
             format: ['PascalCase'],
-            leadingUnderscores: 'allow',
-            trailingUnderscores: 'allow',
+            leadingUnderscore: 'allow',
+            trailingUnderscore: 'allow',
           },
         ],
         '@typescript-eslint/explicit-function-return-type': [

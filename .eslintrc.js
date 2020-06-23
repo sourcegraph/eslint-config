@@ -312,20 +312,18 @@ module.exports = {
         ],
         '@typescript-eslint/naming-convention': [
           'error',
-          [
-            {
-              selector: 'default',
-              format: ['camelCase', 'UPPER_CASE'],
-              leadingUnderscores: 'allow',
-              trailingUnderscores: 'allow',
-            },
-            {
-              selector: 'typeLike',
-              format: ['PascalCase'],
-              leadingUnderscores: 'allow',
-              trailingUnderscores: 'allow',
-            },
-          ],
+          {
+            selector: 'default',
+            format: ['camelCase', 'UPPER_CASE'],
+            leadingUnderscores: 'allow',
+            trailingUnderscores: 'allow',
+          },
+          {
+            selector: 'typeLike',
+            format: ['PascalCase'],
+            leadingUnderscores: 'allow',
+            trailingUnderscores: 'allow',
+          },
         ],
         '@typescript-eslint/explicit-function-return-type': [
           'error',

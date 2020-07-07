@@ -231,6 +231,7 @@ module.exports = {
           'it', // BDD testing
           // NodeJS standard library
           'fs',
+          'os',
           // conventionally used for import * as H from 'history' to not conflict with the global history
           'H',
           // allow `distinctUntilChanged((a, b) => isEqual(a, b))`,

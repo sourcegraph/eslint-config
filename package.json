@@ -39,7 +39,7 @@
     "@typescript-eslint/parser": "^3.6.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-ban": "^1.4.0",
-    "eslint-plugin-etc": "^0.0.1-beta.25",
+    "eslint-plugin-etc": "^0.0.1-beta.34",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsdoc": "^28.6.1",
     "eslint-plugin-react": "^7.20.3",

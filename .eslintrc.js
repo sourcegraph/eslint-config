@@ -228,6 +228,7 @@ module.exports = {
           'to',
           'as',
           'id',
+          'it', // BDD testing
           // NodeJS standard library
           'fs',
           // conventionally used for import * as H from 'history' to not conflict with the global history

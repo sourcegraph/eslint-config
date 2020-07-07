@@ -416,7 +416,7 @@
     semver "^7.3.2"
     tsutils "^3.17.1"
 
-"@typescript-eslint/experimental-utils@3.6.0":
+"@typescript-eslint/experimental-utils@3.6.0", "@typescript-eslint/experimental-utils@^3.2.0":
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/experimental-utils/-/experimental-utils-3.6.0.tgz#0138152d66e3e53a6340f606793fb257bf2d76a1"
   integrity sha512-4Vdf2hvYMUnTdkCNZu+yYlFtL2v+N2R7JOynIOkFbPjf9o9wQvRwRkzUdWlFd2YiiUwJLbuuLnl5civNg5ykOQ==
@@ -1567,12 +1567,14 @@ eslint-etc@^0.0.14:
   resolved "https://registry.yarnpkg.com/eslint-etc/-/eslint-etc-0.0.14.tgz#9e20dc6e6236d78c1f4fc1c4be6f47c24bc3c676"
   integrity sha512-GlE9ezGRB/v8rXU3t659xNMcrlPMQL+G5zQnnv13hi7H14WWMkt9/EWIYPTGoZRDHSY2v1tqkIuS3k+m55Ldfg==
 
-eslint-etc@^0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/eslint-etc/-/eslint-etc-0.0.8.tgz#598c0d9e21734d5878fa101c9e4864667571412f"
-  integrity sha512-UVFu7R13167Gi/m4yggsajygDQAW1ABTlfknXXVIYGAw8Kr0VHFCg7aIaYIOETi6fgiEwtDQe+SSOam4g3QfsA==
+eslint-etc@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-etc/-/eslint-etc-1.0.1.tgz#cdd35ad6062bd7fba31b9d9b74f1e17b467f0a13"
+  integrity sha512-fZ3EhcPJcoIfNkAjFKXpsRz1VZ8egnKh70h+tlHw4ltGtQCT2wa+QpeLjci9ViPPQnnahRdiHpvBiNuKqr9oVA==
   dependencies:
-    esquery "^1.0.1"
+    "@typescript-eslint/experimental-utils" "^3.2.0"
+    tsutils "^3.17.1"
+    tsutils-etc "^1.2.2"
 
 eslint-import-resolver-node@^0.3.3:
   version "0.3.3"
@@ -1597,17 +1599,17 @@ eslint-plugin-ban@^1.4.0:
   dependencies:
     requireindex "~1.2.0"
 
-eslint-plugin-etc@^0.0.1-beta.25:
-  version "0.0.1-beta.25"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-etc/-/eslint-plugin-etc-0.0.1-beta.25.tgz#c97ccb839622b8e3c9d2d2600fdbf0aff8478872"
-  integrity sha512-FYdepWJPNv9qz5eVGw1LgF1TnJKu/vfuSnZ/79wwzXAqAPr4yBozQzRml0FMYpcrV3DYE0Uel+QxQBaKGSuzUA==
+eslint-plugin-etc@^0.0.1-beta.34:
+  version "0.0.1-beta.34"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-etc/-/eslint-plugin-etc-0.0.1-beta.34.tgz#5bd5d202f378c03eca48fdd958b41137243ee3df"
+  integrity sha512-2nFAOoj/zC7KXFs9L3J+UgVJ9JitpEX+Im7tZlgblO12aLUv8iFDvkoyg5llEKncAxlmI+bHcVjZIs8jig23wA==
   dependencies:
     "@phenomnomnominal/tsquery" "^4.0.0"
-    eslint-etc "^0.0.8"
+    "@typescript-eslint/experimental-utils" "^3.2.0"
+    eslint-etc "^1.0.1"
     requireindex "~1.2.0"
-    tslib "^1.8.0"
+    tslib "^2.0.0"
     tsutils "^3.0.0"
-    tsutils-etc "^1.0.0"
 
 eslint-plugin-import@^2.22.0:
   version "2.22.0"
@@ -5101,7 +5103,7 @@ tsconfig-paths@^3.9.0:
     minimist "^1.2.0"
     strip-bom "^3.0.0"
 
-tslib@^1.8.0, tslib@^1.8.1:
+tslib@^1.8.1:
   version "1.10.0"
   resolved "https://registry.npmjs.org/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
   integrity sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
@@ -5111,10 +5113,10 @@ tslib@^2.0.0:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.0.0.tgz#18d13fc2dce04051e20f074cc8387fd8089ce4f3"
   integrity sha512-lTqkx847PI7xEDYJntxZH89L2/aXInsyF2luSafe/+0fHOMjlBNXdH6th7f70qxLDhul7KZK0zC8V5ZIyHl0/g==
 
-tsutils-etc@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.npmjs.org/tsutils-etc/-/tsutils-etc-1.1.0.tgz#82ce1c92da29e07d3cde95692d5c5e8dbdc92fd0"
-  integrity sha512-pJlLtLmQPUyGHqY/Pq6EGnpGmQCnnTDZetQ7eWkeQ5xaw4GtfcR1Zt7HMKFHGDDp53HzQfbqQ+7ps6iJbfa9Hw==
+tsutils-etc@^1.0.0, tsutils-etc@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/tsutils-etc/-/tsutils-etc-1.2.2.tgz#cdeeb777574a5c1b15b27658cb8424f7f7139831"
+  integrity sha512-5g2cXpD1OoVc/MLZxh5PuHXhlnYQmuRiW66e1n91j+2J/Pw5lfmVcZAghoDVBdltDXGaCjy8ZttXaX2u/MjHgg==
 
 tsutils@^3.0.0, tsutils@^3.17.1:
   version "3.17.1"

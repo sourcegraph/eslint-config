@@ -270,6 +270,7 @@ module.exports = {
           subs: { subscriptions: true },
           rect: { rectangle: true },
           obs: { observable: true, observer: true },
+          resp: { response: true },
           // When saving a document in a variable, we usually don't mean the the global document,
           // but an extension API text document. Avoid shadowing suffixes.
           doc: { document: false, textDocument: true },

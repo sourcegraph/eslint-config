@@ -121,7 +121,7 @@ module.exports = {
     quotes: ['error', prettierrc.singleQuote ? 'single' : 'double', { avoidEscape: true }], // So autofixes use the right quote style
     radix: 'error',
     'require-await': 'error',
-    'spaced-comment': 'error',
+    'spaced-comment': ['error', 'always', { line: { markers: ['/'] } }], // Don't error on TypeScript triple-slash comments
     'sort-imports': 'off', // Conflicts with TypeScript and is not fully autofixable.
     'use-isnan': 'error',
     'valid-typeof': 'off',

@@ -41,7 +41,7 @@
     "eslint-plugin-ban": "^1.4.0",
     "eslint-plugin-etc": "^0.0.1-beta.34",
     "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jsdoc": "^29.1.2",
+    "eslint-plugin-jsdoc": "^29.2.0",
     "eslint-plugin-react": "^7.20.3",
     "eslint-plugin-react-hooks": "^4.0.6",
     "eslint-plugin-rxjs": "^0.0.2-beta.27",

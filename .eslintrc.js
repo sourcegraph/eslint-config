@@ -45,6 +45,10 @@ module.exports = {
         message: "Don't forget to remove .only before committing",
       },
       {
+        name: ['test', 'only'],
+        message: "Don't forget to remove .only before committing",
+      },
+      {
         name: ['jest', 'fn'],
         message: 'Use sinon.spy(() => undefined) instead',
       },

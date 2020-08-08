@@ -18,6 +18,8 @@ yarn deduplicate
 yarn
 echo "--- diff"
 git diff
+echo "--- generate"
+yarn generate
 echo "--- build-ts"
 yarn build-ts
 echo "--- eslint"

@@ -1637,10 +1637,19 @@ eslint-config-prettier@^6.11.0:
   dependencies:
     get-stdin "^6.0.0"
 
-eslint-etc@^1.0.0, eslint-etc@^1.0.1:
+eslint-etc@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/eslint-etc/-/eslint-etc-1.0.1.tgz#cdd35ad6062bd7fba31b9d9b74f1e17b467f0a13"
   integrity sha512-fZ3EhcPJcoIfNkAjFKXpsRz1VZ8egnKh70h+tlHw4ltGtQCT2wa+QpeLjci9ViPPQnnahRdiHpvBiNuKqr9oVA==
+  dependencies:
+    "@typescript-eslint/experimental-utils" "^3.2.0"
+    tsutils "^3.17.1"
+    tsutils-etc "^1.2.2"
+
+eslint-etc@^2.0.0:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/eslint-etc/-/eslint-etc-2.2.1.tgz#21b86adc6db950532700a62eebc8a9ed9ff7f514"
+  integrity sha512-I3G+KA9HGZ0lrdaBJG7CaLFJ5rtivXtKY8Ac5ATZ/Rp1hncLeShqnANLXITC0z6BugC4Gd7JlFyxeyiuBsNQFQ==
   dependencies:
     "@typescript-eslint/experimental-utils" "^3.2.0"
     tsutils "^3.17.1"
@@ -1669,14 +1678,14 @@ eslint-plugin-ban@^1.4.0:
   dependencies:
     requireindex "~1.2.0"
 
-eslint-plugin-etc@^0.0.1-beta.36:
-  version "0.0.1-beta.36"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-etc/-/eslint-plugin-etc-0.0.1-beta.36.tgz#88480a2a6904cbdbb5a541947a19c4e10b588753"
-  integrity sha512-nudF0TSMJufZwSD8VUr5i/9iB/XKW2u/OEcn/wfsQNFvhLzae3gH47HYMJd3aFyDLreWJuIi8hcYN6qHP53QTw==
+eslint-plugin-etc@^0.0.1-beta.44:
+  version "0.0.1-beta.44"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-etc/-/eslint-plugin-etc-0.0.1-beta.44.tgz#da41608ddd39b2774f6a6d6a56c23d24a12bff05"
+  integrity sha512-TFdHeoczdmUQdAEmtYXqK/skFruuuHt+ALzFTCpceA8KSvbLOZAL1WDWEWlzX2B0kRzKM9xOoLzZPRmkrIzJxg==
   dependencies:
     "@phenomnomnominal/tsquery" "^4.0.0"
     "@typescript-eslint/experimental-utils" "^3.2.0"
-    eslint-etc "^1.0.1"
+    eslint-etc "^2.0.0"
     requireindex "~1.2.0"
     tslib "^2.0.0"
     tsutils "^3.0.0"

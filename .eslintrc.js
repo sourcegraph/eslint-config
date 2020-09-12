@@ -283,8 +283,9 @@ module.exports = {
           // The meaning of rev vs ref is a common source of confusion.
           // Spelling it out makes it clear.
           rev: { revision: true },
-          // Allow since it's a React term
+          // Allow since they are React terms
           props: false,
+          ref: false,
         },
         whitelist: {
           args: true, // arguments is special

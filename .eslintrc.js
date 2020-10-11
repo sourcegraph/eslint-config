@@ -376,7 +376,9 @@ module.exports = {
             ignoreRestSiblings: true,
           },
         ],
-        '@typescript-eslint/no-use-before-define': ['error', { functions: false }],
+        // no-use-before-define goes against the top-to-bottom rule and TypeScript protects against most temporal deadzone bugs.
+        // https://dzone.com/articles/the-stepdown-rule
+        '@typescript-eslint/no-use-before-define': 'off',
         '@typescript-eslint/no-useless-constructor': 'error',
         '@typescript-eslint/no-var-requires': 'error',
         '@typescript-eslint/prefer-as-const': 'error',
@@ -419,7 +421,6 @@ module.exports = {
       rules: {
         'no-var': 'off',
         '@typescript-eslint/explicit-member-accessibility': 'off',
-        '@typescript-eslint/no-use-before-define': 'off',
         'unicorn/prevent-abbreviations': 'off',
         'id-length': 'off',
       },

@@ -203,7 +203,7 @@ module.exports = {
     'rxjs/no-subject-unsubscribe': 'error',
 
     'etc/throw-error': 'error',
-    'etc/deprecation': 'warn',
+    'etc/no-deprecated': 'warn',
 
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/prefer-regexp-exec': 'off',

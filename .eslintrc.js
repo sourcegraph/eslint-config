@@ -201,9 +201,11 @@ module.exports = {
     'rxjs/no-subclass': 'error',
     'rxjs/no-unsafe-catch': 'error',
     'rxjs/no-subject-unsubscribe': 'error',
+    'rxjs/no-implicit-any-catch': 'error',
 
     'etc/throw-error': 'error',
     'etc/deprecation': 'warn',
+    'etc/no-implicit-any-catch': 'error',
 
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/prefer-regexp-exec': 'off',
@@ -348,6 +350,7 @@ module.exports = {
         '@typescript-eslint/no-extraneous-class': 'error',
         '@typescript-eslint/no-for-in-array': 'error',
         '@typescript-eslint/no-floating-promises': 'error',
+        '@typescript-eslint/no-implicit-any-catch': 'error',
         '@typescript-eslint/no-inferrable-types': ['error', { ignoreParameters: true }],
         '@typescript-eslint/no-misused-new': 'error',
         '@typescript-eslint/no-misused-promises': 'warn',

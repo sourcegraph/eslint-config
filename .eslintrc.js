@@ -13,11 +13,12 @@ module.exports = {
     'plugin:import/warnings',
     'plugin:import/typescript',
     'plugin:unicorn/recommended',
+    'plugin:jsx-a11y/recommended',
   ],
   globals: {
     globalThis: false, // false means not writable
   },
-  plugins: ['ban', 'jsdoc', 'react', 'react-hooks', 'etc', 'rxjs'],
+  plugins: ['ban', 'jsdoc', 'react', 'react-hooks', 'etc', 'rxjs', 'jsx-a11y'],
   settings: {
     react: {
       version: 'detect',

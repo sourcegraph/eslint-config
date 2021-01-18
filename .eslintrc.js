@@ -140,6 +140,7 @@ module.exports = {
     'import/no-dynamic-require': 'error',
     'import/no-useless-path-segments': 'error',
     'import/no-duplicates': 'error',
+    'import/no-default-export': 'error',
 
     // JSDoc
     'jsdoc/require-returns': 'off',
@@ -423,6 +424,7 @@ module.exports = {
         '@typescript-eslint/explicit-member-accessibility': 'off',
         'unicorn/prevent-abbreviations': 'off',
         'id-length': 'off',
+        'import/no-default-export': 'off',
       },
     },
     {

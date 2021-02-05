@@ -13,11 +13,12 @@ module.exports = {
     'plugin:import/warnings',
     'plugin:import/typescript',
     'plugin:unicorn/recommended',
+    'plugin:jest-dom/recommended',
   ],
   globals: {
     globalThis: false, // false means not writable
   },
-  plugins: ['ban', 'jsdoc', 'react', 'react-hooks', 'etc', 'rxjs'],
+  plugins: ['ban', 'jsdoc', 'react', 'react-hooks', 'etc', 'rxjs', 'jest-dom'],
   settings: {
     react: {
       version: 'detect',

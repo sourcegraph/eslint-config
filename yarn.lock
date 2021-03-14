@@ -1821,10 +1821,10 @@ eslint-plugin-ban@^1.4.0:
   dependencies:
     requireindex "~1.2.0"
 
-eslint-plugin-etc@^1.1.7:
-  version "1.1.7"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-etc/-/eslint-plugin-etc-1.1.7.tgz#f3de5724ebe92cfd0be08204d255c35c482907d4"
-  integrity sha512-invh+uREpsJGamInK0eBrCe37CiPY74u3o04UVK+YTtpJgEm6DVF7Wxc+svuPPE0BZlzjoU3PQmrimABTzk/xg==
+eslint-plugin-etc@^1.3.5:
+  version "1.3.5"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-etc/-/eslint-plugin-etc-1.3.5.tgz#779744baa3028d6dbf9886b7294d71ab8004011c"
+  integrity sha512-4J+FBBZLd7bttrBAx+JIhivzdSGLiKFKRDYwTMAzg0gorE7hy30XZFpXk1GG506Hw+VvhLVKO7kAz4BZg2OTvQ==
   dependencies:
     "@phenomnomnominal/tsquery" "^4.0.0"
     "@typescript-eslint/experimental-utils" "^4.0.0"

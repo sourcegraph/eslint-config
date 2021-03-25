@@ -14,11 +14,12 @@ module.exports = {
     'plugin:import/typescript',
     'plugin:unicorn/recommended',
     'plugin:jest-dom/recommended',
+    'plugin:jsx-a11y/recommended',
   ],
   globals: {
     globalThis: false, // false means not writable
   },
-  plugins: ['ban', 'jsdoc', 'react', 'react-hooks', 'etc', 'rxjs', 'jest-dom'],
+  plugins: ['ban', 'jsdoc', 'react', 'react-hooks', 'etc', 'rxjs', 'jest-dom', 'jsx-a11y'],
   settings: {
     react: {
       version: 'detect',
@@ -406,13 +407,20 @@ module.exports = {
         'jsdoc/require-param-type': 'off',
         'jsdoc/require-returns-type': 'off',
         'jsdoc/valid-types': 'off',
+
         'import/no-unresolved': 'off',
         'import/default': 'off',
         'import/named': 'off',
         'import/namespace': 'off',
         'import/no-deprecated': 'off',
+
         'react/no-direct-mutation-state': 'off',
         'react/jsx-no-undef': 'off',
+
+        'jsx-a11y/no-onchange': 'off', // Deprecated due to better browser support
+        'jsx-a11y/no-autofocus': 'off', // Rule can't account for cases where autofocus can be expected
+        'jsx-a11y/accessible-emoji': 'off', // Deprecated due to better browser support
+
         'no-undef': 'off',
         'no-dupe-class-members': 'off',
         'require-await': 'off',

@@ -13,12 +13,13 @@ module.exports = {
     'plugin:import/warnings',
     'plugin:import/typescript',
     'plugin:unicorn/recommended',
+    'plugin:jest-dom/recommended',
     'plugin:jsx-a11y/recommended',
   ],
   globals: {
     globalThis: false, // false means not writable
   },
-  plugins: ['ban', 'jsdoc', 'react', 'react-hooks', 'etc', 'rxjs', 'jsx-a11y'],
+  plugins: ['ban', 'jsdoc', 'react', 'react-hooks', 'etc', 'rxjs', 'jest-dom', 'jsx-a11y'],
   settings: {
     react: {
       version: 'detect',
@@ -141,6 +142,7 @@ module.exports = {
     'import/no-dynamic-require': 'error',
     'import/no-useless-path-segments': 'error',
     'import/no-duplicates': 'error',
+    'import/no-default-export': 'error',
 
     // JSDoc
     'jsdoc/require-returns': 'off',
@@ -424,6 +426,7 @@ module.exports = {
         '@typescript-eslint/explicit-member-accessibility': 'off',
         'unicorn/prevent-abbreviations': 'off',
         'id-length': 'off',
+        'import/no-default-export': 'off',
       },
     },
     {

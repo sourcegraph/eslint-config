@@ -143,6 +143,25 @@ module.exports = {
     'import/no-useless-path-segments': 'error',
     'import/no-duplicates': 'error',
     'import/no-default-export': 'error',
+    'import/order': [
+      'error',
+      {
+        'newlines-between': 'always',
+        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
+        pathGroups: [
+          {
+            pattern: '@sourcegraph/**',
+            group: 'external',
+            position: 'after',
+          },
+        ],
+        pathGroupsExcludedImportTypes: [],
+      },
+    ],
 
     // JSDoc
     'jsdoc/require-returns': 'off',

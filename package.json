@@ -46,7 +46,7 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.21.4",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-rxjs": "^2.1.5",
+    "eslint-plugin-rxjs": "^2.1.7",
     "eslint-plugin-unicorn": "^21.0.0"
   }
 }

@@ -187,7 +187,7 @@ module.exports = {
     'react/jsx-curly-brace-presence': 'error',
     'react/jsx-fragments': ['error', 'syntax'],
     'react/jsx-key': 'error',
-    'react/jsx-no-bind': ['error', { ignoreRefs: true, ignoreDOMComponents: true }],
+    'react/jsx-no-bind': 'off',
     'react/jsx-no-comment-textnodes': 'error',
     'react/jsx-no-target-blank': 'error',
     'react/no-access-state-in-setstate': 'error',

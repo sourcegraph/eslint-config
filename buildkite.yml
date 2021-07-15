@@ -1,5 +1,7 @@
 env:
   FORCE_COLOR: '3'
+  # Bump Node.js memory to prevent OOM crashes
+  NODE_OPTIONS: --max_old_space_size=4096
 
 steps:
   - command: |-

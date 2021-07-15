@@ -1,5 +1,5 @@
 env:
-  FORCE_COLOR: "3"
+  FORCE_COLOR: '3'
   # Bump Node.js memory to prevent OOM crashes
   NODE_OPTIONS: --max_old_space_size=4096
 
@@ -7,11 +7,11 @@ steps:
   - command: |-
       yarn
       yarn prettier-check
-    label: ":prettier:"
+    label: ':prettier:'
 
   - command: ./check_dependent.sh
-    label: ":eslint:"
-    branches: "!master"
+    label: ':eslint:'
+    branches: '!master'
 
   - wait
 
@@ -19,6 +19,6 @@ steps:
       yarn
       yarn run semantic-release
     branches: master
-    label: ":npm:"
+    label: ':npm:'
     concurrency: 1
     concurrency_group: release

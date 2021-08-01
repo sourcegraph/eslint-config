@@ -27,8 +27,8 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "^12.1.4",
-    "@commitlint/config-conventional": "^12.1.4",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "husky": "^4.3.5",
     "prettier": "^2.3.2",
     "semantic-release": "^17.1.2"

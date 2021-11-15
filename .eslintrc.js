@@ -19,7 +19,7 @@ module.exports = {
   globals: {
     globalThis: false, // false means not writable
   },
-  plugins: ['ban', 'jsdoc', 'react', 'react-hooks', 'etc', 'rxjs', 'jest-dom', 'jsx-a11y'],
+  plugins: ['ban', 'jsdoc', 'react', 'react-hooks', 'etc', 'rxjs', 'jest-dom', 'jsx-a11y', 'unused-imports'],
   settings: {
     react: {
       version: 'detect',
@@ -314,6 +314,9 @@ module.exports = {
         },
       },
     ],
+
+    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-vars': 'off',
   },
   overrides: [
     {

@@ -1972,10 +1972,10 @@ eslint-plugin-react@^7.21.4:
     resolve "^1.17.0"
     string.prototype.matchall "^4.0.2"
 
-eslint-plugin-rxjs@^2.1.5:
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-rxjs/-/eslint-plugin-rxjs-2.1.5.tgz#67f864a4a42a301d5845d6b27444627677ca89cd"
-  integrity sha512-gQppucbXyYKCxgdBVud/mwVJ1+EIA7jr5WXvyGslWWEhA7JfQcVSKHpanywAT4QDvRreyq0sY3Kzm0hKgYJGBQ==
+eslint-plugin-rxjs@^2.1.7:
+  version "2.1.7"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-rxjs/-/eslint-plugin-rxjs-2.1.7.tgz#292e47ac5d46730b8c14290bb768daa7116a58d3"
+  integrity sha512-8SHBpqLf0FxSqQha6JXnBQV0Z3HcCg84tEhOgqZNUx3xpt8RhTpS3m+A0LU7OznRPGNEmmyHPPTutz2T0YXLWg==
   dependencies:
     "@typescript-eslint/experimental-utils" "^4.0.0"
     common-tags "^1.8.0"

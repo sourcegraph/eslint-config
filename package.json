@@ -11,10 +11,6 @@
     ".eslintrc.js"
   ],
   "main": ".eslintrc.js",
-  "engines": {
-    "node": "^v16.7.0",
-    "yarn": "^1.22.4"
-  },
   "scripts": {
     "semantic-release": "semantic-release",
     "prettier": "prettier '**/*.{js?(on),ts?(x),scss,md,yml}' --write --list-different",

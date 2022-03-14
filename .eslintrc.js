@@ -154,8 +154,19 @@ module.exports = {
         },
         pathGroups: [
           {
+            pattern: 'react',
+            group: 'external',
+            position: 'before',
+          },
+          {
             pattern: '@sourcegraph/**',
             group: 'external',
+            position: 'after',
+          },
+          {
+            pattern: '*.scss',
+            group: 'index',
+            patternOptions: { matchBase: true },
             position: 'after',
           },
         ],

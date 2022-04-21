@@ -24,4 +24,4 @@ yarn generate
 echo "--- build-ts"
 yarn build-ts
 echo "--- eslint"
-yarn all:eslint
+yarn lint:js:all

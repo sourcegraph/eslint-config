@@ -3,15 +3,24 @@ env:
   # Bump Node.js memory to prevent OOM crashes
   NODE_OPTIONS: --max_old_space_size=4096
 
+template:
+  - &asdf_cache_plugin
+    https://github.com/sourcegraph/asdf-cache-buildkite-plugin.git#main:
+      bucket_name: 'sourcegraph_buildkite_cache'
+      region_name: 'us-central1'
+
 steps:
   - command: |-
       yarn
       yarn prettier-check
     label: ':prettier:'
-
+    plugins:
+      - *asdf_cache_plugin
   - command: ./check_dependent.sh
     label: ':eslint:'
     branches: '!master'
+    plugins:
+      - *asdf_cache_plugin
 
   - wait
 
@@ -22,3 +31,5 @@ steps:
     label: ':npm:'
     concurrency: 1
     concurrency_group: release
+    plugins:
+      - *asdf_cache_plugin

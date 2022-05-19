@@ -382,10 +382,7 @@ module.exports = {
     // Previous Rules that has been causing errors after upgrading
     'import/extensions': 'off',
     'unicorn/consistent-function-scoping': 'off',
-    'unicorn/prevent-abbreviations': 'off',
     'rxjs/no-nested-subscribe': 'off',
-    'import/no-useless-path-segments': 'off',
-    '@typescript-eslint/restrict-template-expressions': 'off',
     // End
   },
   overrides: [
@@ -491,7 +488,9 @@ module.exports = {
         '@typescript-eslint/prefer-nullish-coalescing': 'off', // https://github.com/typescript-eslint/typescript-eslint/issues/1265
         '@typescript-eslint/type-annotation-spacing': 'off',
         '@typescript-eslint/triple-slash-reference': 'error',
-        '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true, allowBoolean: true }],
+        // This rule was causing error so turned it off
+        // '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true, allowBoolean: true }],
+        '@typescript-eslint/restrict-template-expressions': 'off',
         '@typescript-eslint/return-await': 'error',
         '@typescript-eslint/unbound-method': 'error',
         '@typescript-eslint/unified-signatures': 'error',

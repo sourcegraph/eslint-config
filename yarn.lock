@@ -2098,10 +2098,10 @@ eslint-plugin-jsx-a11y@^6.5.1:
     language-tags "^1.0.5"
     minimatch "^3.0.4"
 
-eslint-plugin-react-hooks@^4.6.0-next-9f80a48ad-20220427:
-  version "4.6.0-next-e531a4a62-20220505"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.6.0-next-e531a4a62-20220505.tgz#9fec248cfbefa77611026e868a511a080fcca7c9"
-  integrity sha512-V7Mbrh+MAwf3BsTQXMT6w9gY6oZjvK+tosz5uwmyo76DPMe0+4qmuRz49FPOyV6lDpjah6sbyxVhrU+AIcRfbw==
+eslint-plugin-react-hooks@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-4.5.0.tgz#5f762dfedf8b2cf431c689f533c9d3fa5dcf25ad"
+  integrity sha512-8k1gRt7D7h03kd+SAAlzXkQwWK22BnK6GKZG+FJA6BAGy22CFvl8kCIXKpVux0cCxMWDQUPqSok0LKaZ0aOcCw==
 
 eslint-plugin-react@^7.21.4:
   version "7.21.4"

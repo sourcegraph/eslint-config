@@ -16,6 +16,7 @@ steps:
     label: ':prettier:'
     plugins:
       - *asdf_cache_plugin
+
   - command: ./check_dependent.sh
     label: ':eslint:'
     branches: '!master'

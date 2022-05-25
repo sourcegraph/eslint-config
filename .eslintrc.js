@@ -236,7 +236,7 @@ module.exports = {
     'rxjs/no-subject-unsubscribe': 'error',
 
     'etc/throw-error': 'error',
-    'etc/no-deprecated': 'off',
+    'etc/no-deprecated': 'warn',
 
     '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/prefer-regexp-exec': 'off',
@@ -376,11 +376,9 @@ module.exports = {
 
     '@typescript-eslint/no-unsafe-argument': 'off',
     '@typescript-eslint/no-unnecessary-type-constraint': 'off',
-
     // End
 
     // Previous Rules that has been causing errors after upgrading
-    'import/extensions': 'off',
     'unicorn/consistent-function-scoping': 'off',
     'rxjs/no-nested-subscribe': 'off',
     // End

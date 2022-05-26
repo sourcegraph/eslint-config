@@ -134,7 +134,13 @@ module.exports = {
     yoda: 'error',
 
     // Imports
-    'import/extensions': ['error', 'never'],
+    'import/extensions': [
+      'error',
+      'never',
+      {
+        schema: 'always',
+      },
+    ],
     'import/no-deprecated': 'warn',
     'import/no-unused-modules': 'error',
     'import/no-cycle': 'off', // Too slow

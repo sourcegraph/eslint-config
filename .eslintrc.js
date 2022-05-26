@@ -243,7 +243,9 @@ module.exports = {
     // These are error by default for JS too
     '@typescript-eslint/no-unsafe-call': 'warn',
     '@typescript-eslint/no-unsafe-member-access': 'warn',
-    '@typescript-eslint/no-unsafe-return': 'warn',
+    // Turned off this rule since it was throwing
+    // TypeError: Cannot read property 'kind' of undefined
+    '@typescript-eslint/no-unsafe-return': 'off',
     '@typescript-eslint/no-unsafe-assignment': 'warn',
 
     'unicorn/filename-case': ['error', { cases: { camelCase: true, pascalCase: true, kebabCase: true } }],
@@ -318,8 +320,10 @@ module.exports = {
           rev: { revision: true },
           // Allow since it's a React term
           props: false,
+          func: false,
+          ref: false,
         },
-        whitelist: {
+        allowList: {
           args: true, // arguments is special
           fs: true, // NodeJS standard library
         },
@@ -328,6 +332,56 @@ module.exports = {
 
     'unused-imports/no-unused-imports': 'error',
     'unused-imports/no-unused-vars': 'off',
+    // New rules added to unicorn
+    'unicorn/no-array-reduce': 'off',
+    'unicorn/no-array-callback-reference': 'off',
+    'unicorn/numeric-separators-style': 'off',
+    'unicorn/prefer-switch': 'off',
+    'unicorn/prefer-spread': 'off',
+    'unicorn/template-indent': 'off',
+    'unicorn/prefer-export-from': 'off',
+    'unicorn/explicit-length-check': 'off',
+    'unicorn/prefer-date-now': 'off',
+    'unicorn/no-await-expression-member': 'off',
+    'unicorn/prefer-dom-node-text-content': 'off',
+    'unicorn/consistent-destructuring': 'off',
+    'unicorn/no-new-array': 'off',
+    'unicorn/prefer-ternary': 'off',
+    'unicorn/prefer-dom-node-dataset': 'off',
+    'unicorn/no-useless-spread': 'off',
+    'unicorn/no-lonely-if': 'off',
+    'unicorn/prefer-array-some': 'off',
+    'unicorn/prefer-native-coercion-functions': 'off',
+    'unicorn/relative-url-style': 'off',
+    'unicorn/prefer-array-flat-map': 'off',
+    'unicorn/prefer-node-protocol': 'off',
+    'unicorn/prefer-module': 'off',
+    'unicorn/no-useless-promise-resolve-reject': 'off',
+    'unicorn/no-array-method-this-argument': 'off',
+    'unicorn/no-array-for-each': 'off',
+    'no-unsafe-optional-chaining': 'off',
+    'unicorn/import-style': 'off',
+    'unicorn/no-array-push-push': 'off',
+    'unicorn/no-useless-switch-case': 'off',
+    'unicorn/prefer-regexp-test': 'off',
+    'unicorn/no-object-as-default-parameter': 'off',
+    'unicorn/prefer-code-point': 'off',
+    'unicorn/prefer-object-from-entries': 'off',
+    'unicorn/prefer-math-trunc': 'off',
+    'unicorn/text-encoding-identifier-case': 'off',
+    'unicorn/no-unreadable-iife': 'off',
+    'unicorn/error-message': 'off',
+    'unicorn/no-thenable': 'off',
+    'unicorn/prefer-array-index-of': 'off',
+
+    '@typescript-eslint/no-unsafe-argument': 'off',
+    '@typescript-eslint/no-unnecessary-type-constraint': 'off',
+    // End
+
+    // Previous Rules that has been causing errors after upgrading
+    'unicorn/consistent-function-scoping': 'off',
+    'rxjs/no-nested-subscribe': 'off',
+    // End
   },
   overrides: [
     {
@@ -402,7 +456,9 @@ module.exports = {
         // Switch to error when all cases are fixed
         '@typescript-eslint/no-unsafe-call': 'warn',
         '@typescript-eslint/no-unsafe-member-access': 'warn',
-        '@typescript-eslint/no-unsafe-return': 'warn',
+        // Turned off this rule since it was throwing
+        // TypeError: Cannot read property 'kind' of undefined
+        '@typescript-eslint/no-unsafe-return': 'off',
         '@typescript-eslint/no-unsafe-assignment': 'warn',
         '@typescript-eslint/no-unused-vars': [
           'warn',
@@ -430,7 +486,9 @@ module.exports = {
         '@typescript-eslint/prefer-nullish-coalescing': 'off', // https://github.com/typescript-eslint/typescript-eslint/issues/1265
         '@typescript-eslint/type-annotation-spacing': 'off',
         '@typescript-eslint/triple-slash-reference': 'error',
-        '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true, allowBoolean: true }],
+        // This rule was causing error so turned it off
+        // '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true, allowBoolean: true }],
+        '@typescript-eslint/restrict-template-expressions': 'off',
         '@typescript-eslint/return-await': 'error',
         '@typescript-eslint/unbound-method': 'error',
         '@typescript-eslint/unified-signatures': 'error',

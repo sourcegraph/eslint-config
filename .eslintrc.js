@@ -335,6 +335,7 @@ module.exports = {
     // New rules added to unicorn
     'unicorn/no-array-reduce': 'off',
     'unicorn/no-array-callback-reference': 'off',
+    'unicorn/number-literal-case': 'off',
     'unicorn/numeric-separators-style': 'off',
     'unicorn/prefer-switch': 'off',
     'unicorn/prefer-spread': 'off',

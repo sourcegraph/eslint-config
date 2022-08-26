@@ -277,10 +277,59 @@ module.exports = {
           // which is extremely common and necessary to maintain type safety.
           'a',
           'b',
+          // caught by prevent-abbreviations below, avoid double-flagging
+          'e',
+          'i',
+          'ch',
         ],
       },
     ],
-    'unicorn/prevent-abbreviations': 'off',
+    'unicorn/prevent-abbreviations': [
+      'error',
+      {
+        checkShorthandImports: false,
+        replacements: {
+          e: {
+            event: true,
+            error: true,
+            end: true, // as in e2e
+          },
+          i: { index: true },
+          idx: { index: true },
+          ch: { character: true },
+          j2d: { goToDefinition: true },
+          pos: { position: true },
+          opt: { options: true, option: true },
+          cmd: { command: true },
+          cmds: { commands: true },
+          loc: { location: true },
+          ext: { extension: true },
+          expr: { expression: true },
+          sub: { subscription: true },
+          subs: { subscriptions: true },
+          rect: { rectangle: true },
+          obs: { observable: true, observer: true },
+          resp: { response: true },
+          // When saving a document in a variable, we usually don't mean the the global document,
+          // but an extension API text document. Avoid shadowing suffixes.
+          doc: { document: false, textDocument: true },
+          // Never needed in our codebase, better to have an autofix for directory
+          dir: { direction: false },
+          // The meaning of rev vs ref is a common source of confusion.
+          // Spelling it out makes it clear.
+          rev: { revision: true },
+          // Allow since it's a React term
+          props: false,
+          func: false,
+          ref: false,
+        },
+        allowList: {
+          args: true, // arguments is special
+          fs: true, // NodeJS standard library
+        },
+      },
+    ],
+
     'unused-imports/no-unused-imports': 'error',
     'unused-imports/no-unused-vars': 'off',
     // New rules added to unicorn
@@ -474,6 +523,7 @@ module.exports = {
       rules: {
         'no-var': 'off',
         '@typescript-eslint/explicit-member-accessibility': 'off',
+        'unicorn/prevent-abbreviations': 'off',
         'id-length': 'off',
         'import/no-default-export': 'off',
       },

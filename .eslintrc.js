@@ -174,9 +174,7 @@ module.exports = {
       },
     ],
 
-    // 
-    
-    
+    // JSDoc
     'jsdoc/require-returns': 'off',
     'jsdoc/require-jsdoc': 'off',
     'jsdoc/require-param': 'off',

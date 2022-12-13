@@ -174,12 +174,14 @@ module.exports = {
       },
     ],
 
-    // JSDoc
+    // 
+    
+    
     'jsdoc/require-returns': 'off',
     'jsdoc/require-jsdoc': 'off',
     'jsdoc/require-param': 'off',
     'jsdoc/no-bad-blocks': 'error',
-    'jsdoc/check-indentation': 'error',
+    'jsdoc/check-indentation': 'off',
     'jsdoc/check-tag-names': [
       'error',
       {

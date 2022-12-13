@@ -179,7 +179,7 @@ module.exports = {
     'jsdoc/require-jsdoc': 'off',
     'jsdoc/require-param': 'off',
     'jsdoc/no-bad-blocks': 'error',
-    'jsdoc/check-indentation': 'error',
+    'jsdoc/check-indentation': 'off',
     'jsdoc/check-tag-names': [
       'error',
       {

@@ -257,29 +257,7 @@ module.exports = {
     'unicorn/prefer-number-properties': 'off',
     'unicorn/custom-error-definition': 'off', // false positives: https://github.com/sindresorhus/eslint-plugin-unicorn/issues/753
     'unicorn/no-nested-ternary': 'off', // if-elseif-else ternaries are commonly needed in JSX and formatted well by Prettier
-    'id-length': [
-      'error',
-      {
-        min: 3,
-        properties: 'never',
-        exceptions: [
-          // valid
-          'to',
-          'as',
-          'id',
-          'it', // BDD testing
-          // NodeJS standard library
-          'fs',
-          'os',
-          // conventionally used for import * as H from 'history' to not conflict with the global history
-          'H',
-          // allow `distinctUntilChanged((a, b) => isEqual(a, b))`,
-          // which is extremely common and necessary to maintain type safety.
-          'a',
-          'b',
-        ],
-      },
-    ],
+    'id-length': 'off',
     'unicorn/prevent-abbreviations': 'off',
     'unused-imports/no-unused-imports': 'error',
     'unused-imports/no-unused-vars': 'off',

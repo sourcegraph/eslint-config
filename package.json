@@ -30,14 +30,14 @@
     "@commitlint/cli": "^17.0.0",
     "@commitlint/config-conventional": "^17.0.0",
     "husky": "^4.3.5",
-    "prettier": "^2.4.1",
+    "prettier": "^2.8.8",
     "semantic-release": "^17.1.2"
   },
   "dependencies": {
     "@sourcegraph/prettierrc": "^3.0.3",
     "@typescript-eslint/eslint-plugin": "^6.9.0",
     "@typescript-eslint/parser": "^6.9.0",
-    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-ban": "^1.4.0",
     "eslint-plugin-etc": "^2.0.2",
     "eslint-plugin-import": "^2.26.0",

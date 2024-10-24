@@ -9,6 +9,6 @@ github-cli 2.0.0
 packer 1.7.10
 trivy 0.20.0
 kustomize 4.0.5
-awscli 2.4.7
+awscli 2.18.14
 python system
 rust 1.58.0

@@ -1,4 +1,3 @@
-const prettierrc = require('@sourcegraph/prettierrc')
 module.exports = {
   extends: [
     'eslint:recommended',
@@ -30,7 +29,6 @@ module.exports = {
   reportUnusedDisableDirectives: true,
   rules: {
     'arrow-body-style': 'error',
-    'arrow-parens': ['error', 'as-needed'],
     'ban/ban': [
       'error',
       {
@@ -66,18 +64,13 @@ module.exports = {
         ],
       },
     ],
-    'callback-return': 'error',
     complexity: 'off',
     'constructor-super': 'error',
     curly: 'error',
     'dot-notation': 'error',
     eqeqeq: 'error',
-    'eol-last': 'error',
     'guard-for-in': 'error',
-    'linebreak-style': 'off',
     'max-classes-per-file': 'off',
-    'new-parens': 'error',
-    'newline-per-chained-call': 'off',
     'no-bitwise': 'off',
     'no-caller': 'error',
     'no-cond-assign': 'error',
@@ -89,19 +82,15 @@ module.exports = {
     'no-else-return': ['error', { allowElseIf: false }],
     'no-eval': 'error',
     'no-extra-bind': 'error',
-    'no-extra-semi': 'off',
     'no-fallthrough': 'off',
-    'no-floating-decimal': 'error',
     'no-inner-declarations': 'off',
     'no-invalid-this': 'off',
     'no-irregular-whitespace': 'error',
     'no-lonely-if': 'error',
     'no-magic-numbers': 'off',
-    'no-multiple-empty-lines': ['error', { max: 1 }],
     'no-new-wrappers': 'error',
     'no-redeclare': 'off',
     'no-sparse-arrays': 'error',
-    'no-sync': ['error', { allowAtRootLevel: true }],
     'no-template-curly-in-string': 'error',
     'no-throw-literal': 'error',
     'no-undef-init': 'error',
@@ -123,10 +112,8 @@ module.exports = {
     'prefer-rest-params': 'error',
     'prefer-spread': 'error',
     'prefer-template': 'off',
-    quotes: ['error', prettierrc.singleQuote ? 'single' : 'double', { avoidEscape: true }], // So autofixes use the right quote style
     radix: 'error',
     'require-await': 'error',
-    'spaced-comment': ['error', 'always', { line: { markers: ['/'] } }], // Don't error on TypeScript triple-slash comments
     'sort-imports': 'off', // Conflicts with TypeScript and is not fully autofixable.
     'use-isnan': 'error',
     'valid-typeof': 'off',
@@ -184,6 +171,18 @@ module.exports = {
       {
         // Used by typedoc
         definedTags: ['hidden', 'internal'],
+        // `see` was historically accepted inline by this config.
+        inlineTags: [
+          'link',
+          'linkcode',
+          'linkplain',
+          'tutorial',
+          'inheritDoc',
+          'label',
+          'include',
+          'includeCode',
+          'see',
+        ],
       },
     ],
 
@@ -237,7 +236,6 @@ module.exports = {
     'etc/throw-error': 'error',
     'etc/no-deprecated': 'warn',
 
-    '@typescript-eslint/no-var-requires': 'off',
     '@typescript-eslint/prefer-regexp-exec': 'off',
     // These are error by default for JS too
     '@typescript-eslint/no-unsafe-call': 'warn',
@@ -248,10 +246,10 @@ module.exports = {
     '@typescript-eslint/no-unsafe-assignment': 'warn',
 
     'unicorn/filename-case': ['error', { cases: { camelCase: true, pascalCase: true, kebabCase: true } }],
+    // This rule wraps a removed ESLint API and is incompatible with ESLint 10.
+    'unicorn/expiring-todo-comments': 'off',
     'unicorn/no-process-exit': 'off',
     'unicorn/no-null': 'off', // DOM API often works with null
-    'unicorn/no-fn-reference-in-iterator': 'off', // we use filter(isDefined) a lot
-    'unicorn/no-reduce': 'off',
     'unicorn/no-useless-undefined': 'off', // conflicts with TypeScript
     'unicorn/prefer-number-properties': 'off',
     'unicorn/custom-error-definition': 'off', // false positives: https://github.com/sindresorhus/eslint-plugin-unicorn/issues/753
@@ -260,9 +258,8 @@ module.exports = {
     'unicorn/prevent-abbreviations': 'off',
     'unused-imports/no-unused-imports': 'error',
     'unused-imports/no-unused-vars': 'off',
-    // New rules added to unicorn
     'unicorn/no-array-reduce': 'off',
-    'unicorn/no-array-callback-reference': 'off',
+    'unicorn/no-array-callback-reference': 'off', // we use filter(isDefined) a lot
     'unicorn/number-literal-case': 'off',
     'unicorn/numeric-separators-style': 'off',
     'unicorn/prefer-switch': 'off',
@@ -302,15 +299,26 @@ module.exports = {
     'unicorn/error-message': 'off',
     'unicorn/no-thenable': 'off',
     'unicorn/prefer-array-index-of': 'off',
+    // Preserve the existing policy when upgrading Unicorn. These rules were added to its recommended config in v49-v56.
+    'unicorn/consistent-empty-array-spread': 'off',
+    'unicorn/consistent-existence-index-check': 'off',
+    'unicorn/no-anonymous-default-export': 'off',
+    'unicorn/no-await-in-promise-methods': 'off',
+    'unicorn/no-invalid-fetch-options': 'off',
+    'unicorn/no-length-as-slice-end': 'off',
+    'unicorn/no-magic-array-flat-depth': 'off',
+    'unicorn/no-negation-in-equality-check': 'off',
+    'unicorn/no-single-promise-in-promise-methods': 'off',
+    'unicorn/no-unnecessary-polyfills': 'off',
+    'unicorn/prefer-global-this': 'off',
+    'unicorn/prefer-math-min-max': 'off',
+    'unicorn/prefer-string-raw': 'off',
+    'unicorn/prefer-structured-clone': 'off',
 
     '@typescript-eslint/no-unsafe-argument': 'off',
     '@typescript-eslint/no-unnecessary-type-constraint': 'off',
-    // End
-
-    // Previous Rules that has been causing errors after upgrading
     'unicorn/consistent-function-scoping': 'off',
     'rxjs/no-nested-subscribe': 'off',
-    // End
   },
   overrides: [
     {
@@ -320,21 +328,14 @@ module.exports = {
       rules: {
         '@typescript-eslint/adjacent-overload-signatures': 'error',
         '@typescript-eslint/array-type': 'error',
-        '@typescript-eslint/await-thenable': 'error',
-        '@typescript-eslint/ban-types': [
-          'error',
-          {
-            extendDefaults: true,
-            types: {
-              // We have custom helpers to deal with checking properties of the `object` type.
-              object: false,
-              // The empty interface {} is often used for React components that accept no props,
-              // which is a lot easier to understand than accepting `object` or `Record<never, never>`
-              // and has no real diadvantages.
-              '{}': false,
-            },
-          },
-        ],
+        // TypeScript ESLint 8 also reports unnecessary Promise aggregators. Keep existing cases visible without
+        // making the toolchain upgrade an immediate build break.
+        '@typescript-eslint/await-thenable': 'warn',
+        // The empty object type is often used for React components that accept no props. We have custom helpers
+        // for checking properties of the `object` type, so preserve the exceptions from the former ban-types rule.
+        '@typescript-eslint/no-empty-object-type': 'off',
+        '@typescript-eslint/no-unsafe-function-type': 'error',
+        '@typescript-eslint/no-wrapper-object-types': 'error',
         '@typescript-eslint/naming-convention': [
           'off',
           {
@@ -357,11 +358,7 @@ module.exports = {
           { allowExpressions: true, allowTypedFunctionExpressions: true, allowHigherOrderFunctions: true },
         ],
         '@typescript-eslint/explicit-member-accessibility': ['error', { overrides: { constructors: 'no-public' } }],
-        '@typescript-eslint/indent': 'off',
-        '@typescript-eslint/interface-name-prefix': 'off',
-        '@typescript-eslint/member-delimiter-style': 'off',
         '@typescript-eslint/member-ordering': 'off',
-        '@typescript-eslint/no-empty-interface': 'off',
         '@typescript-eslint/no-empty-function': ['error', { allow: ['arrowFunctions'] }],
         '@typescript-eslint/no-explicit-any': 'warn',
         '@typescript-eslint/no-extraneous-class': 'error',
@@ -378,7 +375,6 @@ module.exports = {
         ],
         '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
         '@typescript-eslint/no-base-to-string': 'error',
-        '@typescript-eslint/no-parameter-properties': 'off',
         '@typescript-eslint/no-require-imports': 'error',
         '@typescript-eslint/no-unnecessary-qualifier': 'error',
         '@typescript-eslint/no-unnecessary-type-assertion': 'warn',
@@ -401,19 +397,17 @@ module.exports = {
         // https://dzone.com/articles/the-stepdown-rule
         '@typescript-eslint/no-use-before-define': 'off',
         '@typescript-eslint/no-useless-constructor': 'error',
-        '@typescript-eslint/no-var-requires': 'error',
         '@typescript-eslint/prefer-as-const': 'error',
         '@typescript-eslint/prefer-for-of': 'error',
         'unicorn/no-for-loop': 'off',
         '@typescript-eslint/prefer-string-starts-ends-with': 'error',
-        'unicorn/prefer-starts-ends-with': 'off',
+        'unicorn/prefer-string-starts-ends-with': 'off',
         '@typescript-eslint/prefer-function-type': 'error',
         '@typescript-eslint/prefer-includes': 'error',
         'unicorn/prefer-includes': 'off',
         '@typescript-eslint/prefer-namespace-keyword': 'error',
         '@typescript-eslint/prefer-optional-chain': 'error',
         '@typescript-eslint/prefer-nullish-coalescing': 'off', // https://github.com/typescript-eslint/typescript-eslint/issues/1265
-        '@typescript-eslint/type-annotation-spacing': 'off',
         '@typescript-eslint/triple-slash-reference': 'error',
         // This rule was causing error so turned it off
         // '@typescript-eslint/restrict-template-expressions': ['error', { allowNumber: true, allowBoolean: true }],
@@ -437,9 +431,7 @@ module.exports = {
         'react/no-direct-mutation-state': 'off',
         'react/jsx-no-undef': 'off',
 
-        'jsx-a11y/no-onchange': 'off', // Deprecated due to better browser support
         'jsx-a11y/no-autofocus': 'off', // Rule can't account for cases where autofocus can be expected
-        'jsx-a11y/accessible-emoji': 'off', // Deprecated due to better browser support
 
         'no-undef': 'off',
         'no-dupe-class-members': 'off',
@@ -470,8 +462,6 @@ module.exports = {
       rules: {
         // False positive on react-test-renderer act()
         '@typescript-eslint/no-floating-promises': 'off',
-        // False positive https://github.com/sindresorhus/eslint-plugin-unicorn/issues/751
-        'unicorn/prefer-flat-map': 'off',
       },
     },
   ],

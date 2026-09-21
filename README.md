@@ -11,12 +11,16 @@ Shared ESLint config for Sourcegraph projects
 ## Install
 
 ```
-npm install @sourcegraph/eslint-config
-# or
-yarn add @sourcegraph/eslint-config
+npm install --save-dev @sourcegraph/eslint-config eslint typescript
 ```
 
-Then add an `.eslintrc.json` to your project with
+Then create `eslint.config.js`:
+
+```js
+module.exports = require('@sourcegraph/eslint-config/flat')
+```
+
+The legacy config remains available for projects that still use `.eslintrc`:
 
 ```json
 {
@@ -47,22 +51,13 @@ and either prevent it or add a comment for reviewers that justify the violation.
 
 Rules are not perfect and may sometimes flag false positives.
 For these cases, and only these cases, there is `eslint-disable`.
-Prefer keeping the disabled zone as small as possible (preferrably using `eslint-disable-next-line`).
+Prefer keeping the disabled zone as small as possible (preferably using `eslint-disable-next-line`).
 When disabling a rule, it is a good practice to add an additional comment stating a justification why the rule is okay to be disabled there.
 This saves a roundtrip in code review, as the reviewer would have to ask for the reason.
 It also serves as information to future readers that this is an exceptional condition and should not be blindly copied somewhere else without verifying the same condition applies there.
 
 When not to use `eslint-disable`: If you disagree with a rule (think a rule is more annoying than useful), please open an issue here to discuss changing the rule for all code, if there is consensus.
 
-## TSLint
-
-This ruleset replaces almost all of our TSLint config, however there is a handful of rules that have no equivalent in ESLint yet.
-For these, it is recommended to run TSLint in addition to ESLint.
-The package dist-tag `@sourcegraph/tslint-config@eslint` contains only the TSLint rules that are not yet in this ESLint config.
-
 ## Release
 
 Releases are done automatically in CI when commits are merged into master by analyzing [Conventional Commit Messages](https://conventionalcommits.org/).
-After running `yarn`, commit messages will be linted automatically when committing though a git hook.
-The git hook can be circumvented for fixup commits with [git's `fixup!` autosquash feature](https://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html), or by passing `--no-verify` to `git commit`.
-You may have to rebase a branch before merging to ensure it has a proper commit history, or squash merge with a manually edited commit message that conforms to the convention.

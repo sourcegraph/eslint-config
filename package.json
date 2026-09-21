@@ -7,47 +7,52 @@
     "type": "git",
     "url": "https://github.com/sourcegraph/eslint-config.git"
   },
+  "engines": {
+    "node": ">=22.22.2"
+  },
   "files": [
-    ".eslintrc.js"
+    ".eslintrc.js",
+    "flat.js"
   ],
   "main": ".eslintrc.js",
+  "exports": {
+    ".": "./.eslintrc.js",
+    "./flat": "./flat.js"
+  },
   "scripts": {
     "semantic-release": "semantic-release",
-    "prettier": "prettier '**/*.{js?(on),ts?(x),scss,md,yml}' --write --list-different",
-    "prettier-check": "npm run prettier -- --write=false"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS"
-    }
+    "prettier": "prettier --write .",
+    "prettier-check": "prettier --check .",
+    "test": "node --test"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.0.0",
-    "@commitlint/config-conventional": "^17.0.0",
-    "husky": "^4.3.5",
-    "prettier": "^2.4.1",
-    "semantic-release": "^17.1.2"
+    "@sourcegraph/prettierrc": "^3.0.3",
+    "eslint": "^10.11.0",
+    "prettier": "^3.9.0",
+    "semantic-release": "^25.0.0",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@sourcegraph/prettierrc": "^3.0.3",
-    "@typescript-eslint/eslint-plugin": "^6.9.0",
-    "@typescript-eslint/parser": "^6.9.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-ban": "^1.4.0",
+    "@eslint/compat": "^2.1.1",
+    "@eslint/eslintrc": "^3.3.7",
+    "@eslint/js": "^10.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.70.0",
+    "@typescript-eslint/parser": "^8.70.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-ban": "^2.0.0",
     "eslint-plugin-etc": "^2.0.2",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jest-dom": "^5.1.0",
-    "eslint-plugin-jsdoc": "^46.8.2",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-react": "^7.21.4",
-    "eslint-plugin-react-hooks": "^4.5.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jest-dom": "^5.10.1",
+    "eslint-plugin-jsdoc": "^64.5.3",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-rxjs": "^5.0.2",
-    "eslint-plugin-unicorn": "^48.0.0",
-    "eslint-plugin-unused-imports": "^3.0.0"
+    "eslint-plugin-unicorn": "^56.0.1",
+    "eslint-plugin-unused-imports": "^4.4.1"
+  },
+  "peerDependencies": {
+    "eslint": "^10.4.0",
+    "typescript": ">=4.8.4 <6.1.0"
   }
 }

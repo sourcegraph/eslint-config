@@ -13,6 +13,7 @@ steps:
   - command: |-
       yarn
       yarn prettier-check
+      yarn test
     label: ':prettier:'
     plugins:
       - *asdf_cache_plugin

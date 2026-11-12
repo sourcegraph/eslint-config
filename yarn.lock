@@ -2233,7 +2233,7 @@ eslint-plugin-react@^7.37.5:
     string.prototype.matchall "^4.0.12"
     string.prototype.repeat "^1.0.0"
 
-eslint-plugin-rxjs@^5.0.2:
+eslint-plugin-rxjs@^5.0.3:
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/eslint-plugin-rxjs/-/eslint-plugin-rxjs-5.0.3.tgz#a7ec16549f0dd23051bb744fea5bc0cdf096131a"
   integrity sha512-fcVkqLmYLRfRp+ShafjpUKuaZ+cw/sXAvM5dfSxiEr7M28QZ/NY7vaOr09FB4rSaZsQyLBnNPh5SL+4EgKjh8Q==
